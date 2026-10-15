@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect width="1024" height="1024" fill="#FFC72C"/>
+<line x1="512.0" y1="162.0" x2="512.0" y2="100.0" stroke="#111317" stroke-width="28" stroke-linecap="butt"/>
+<line x1="694.0" y1="196.8" x2="718.0" y2="155.2" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="827.2" y1="330.0" x2="868.8" y2="306.0" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="862.0" y1="512.0" x2="924.0" y2="512.0" stroke="#111317" stroke-width="28" stroke-linecap="butt"/>
+<line x1="827.2" y1="694.0" x2="868.8" y2="718.0" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="694.0" y1="827.2" x2="718.0" y2="868.8" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="512.0" y1="862.0" x2="512.0" y2="924.0" stroke="#111317" stroke-width="28" stroke-linecap="butt"/>
+<line x1="330.0" y1="827.2" x2="306.0" y2="868.8" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="196.8" y1="694.0" x2="155.2" y2="718.0" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="162.0" y1="512.0" x2="100.0" y2="512.0" stroke="#111317" stroke-width="28" stroke-linecap="butt"/>
+<line x1="196.8" y1="330.0" x2="155.2" y2="306.0" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<line x1="330.0" y1="196.8" x2="306.0" y2="155.2" stroke="#111317" stroke-width="18" stroke-linecap="butt"/>
+<g opacity="0.18"><circle cx="512" cy="512" r="300" fill="none" stroke="#111317" stroke-width="62"/></g>
+<path d="M512 212 A300 300 0 1 1 226.7 604.7" fill="none" stroke="#111317" stroke-width="62" stroke-linecap="round"/>
+<g transform="translate(512 520) scale(5.5) translate(-46 -64)"><path d="M22 56 H26.65 L32 43 Q33 40 36 40 H58 Q61 40 62 43 L67.35 56 H70 A8 8 0 0 1 78 64 V76 A4 4 0 0 1 74 80 H73 V85 A3 3 0 0 1 70 88 H63 A3 3 0 0 1 60 85 V80 H32 V85 A3 3 0 0 1 29 88 H22 A3 3 0 0 1 19 85 V80 H18 A4 4 0 0 1 14 76 V64 A8 8 0 0 1 22 56 Z M31 54 L36 46 H58 L63 54 Z M20 68 A5 5 0 1 0 30 68 A5 5 0 1 0 20 68 Z M62 68 A5 5 0 1 0 72 68 A5 5 0 1 0 62 68 Z M40 66 H52 A2 2 0 0 1 52 70 H40 A2 2 0 0 1 40 66 Z" fill="#111317" fill-rule="evenodd"/></g>
+</svg>

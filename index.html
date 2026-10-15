@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Driving Hour Tracker: learner driver logbook app for iPhone, iPad and Apple Watch</title>
+<meta name="description" content="Track your learner driving hours on iPhone. One tap records every supervised practice drive, night hours are worked out from sunset, routes go on the map, and a tidy PDF report is ready to share. No account, no ads.">
+<link rel="canonical" href="https://drivinghourtracker.karmafy.com.au/">
+<meta name="theme-color" content="#FFC72C">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-title" content="Driving Hour Tracker">
+<!-- After the app is on the App Store, paste the id here to show Safari's Smart App Banner:
+<meta name="apple-itunes-app" content="app-id=APP_ID"> -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Driving Hour Tracker">
+<meta property="og:title" content="Driving Hour Tracker: the learner driver logbook that never loses a drive">
+<meta property="og:description" content="Time every supervised drive, count night hours automatically and share a tidy report. For iPhone, iPad and Apple Watch. No account, no ads.">
+<meta property="og:url" content="https://drivinghourtracker.karmafy.com.au/">
+<meta property="og:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="Track your learner driving hours: three iPhones showing progress, a drive being recorded and the logbook.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Driving Hour Tracker: the learner driver logbook that never loses a drive">
+<meta name="twitter:description" content="Time every supervised drive, count night hours automatically and share a tidy report. No account, no ads.">
+<meta name="twitter:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/iphone-recording.webp">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://drivinghourtracker.karmafy.com.au/#website",
+      "url": "https://drivinghourtracker.karmafy.com.au/",
+      "name": "Driving Hour Tracker",
+      "publisher": { "@id": "https://drivinghourtracker.karmafy.com.au/#org" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://drivinghourtracker.karmafy.com.au/#org",
+      "name": "KarmaAcademy",
+      "url": "https://drivinghourtracker.karmafy.com.au/",
+      "logo": "https://drivinghourtracker.karmafy.com.au/assets/icons/icon-192.png"
+    },
+    {
+      "@type": ["SoftwareApplication", "MobileApplication"],
+      "@id": "https://drivinghourtracker.karmafy.com.au/#app",
+      "name": "Driving Hour Tracker",
+      "alternateName": "Driving Hour Tracker learner logbook",
+      "description": "A learner driver logbook for iPhone, iPad and Apple Watch. Records supervised practice drives, works out night hours from sunset, maps routes and exports a PDF report.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS 26, iPadOS 26, watchOS 26",
+      "url": "https://drivinghourtracker.karmafy.com.au/",
+      "image": "https://drivinghourtracker.karmafy.com.au/assets/icons/icon-192.png",
+      "author": { "@id": "https://drivinghourtracker.karmafy.com.au/#org" },
+      "featureList": [
+        "One-tap recording of supervised practice drives",
+        "Night driving hours estimated from sunset along the route",
+        "Driving detection that suggests starting and finishes after you park",
+        "Route maps with distance for every drive",
+        "Total and night goals with progress",
+        "Siri, Shortcuts and Control Center",
+        "Live Activity on the Lock Screen and in the Dynamic Island",
+        "Apple Watch app with complications",
+        "Logbook sharing with a supervisor over iCloud",
+        "PDF report, CSV export, backup and restore"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://drivinghourtracker.karmafy.com.au/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I need an account to log my driving hours?", "acceptedAnswer": { "@type": "Answer", "text": "No. Open the app, type the learner's name and a first supervisor, and start your first drive. The logbook is saved on your iPhone or iPad first. If you're signed in to iCloud it also syncs to your own iCloud account, so it's on your iPad too and you can share it with a supervisor." } },
+        { "@type": "Question", "name": "Does the app work without an internet connection?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Recording, the timer, night estimates and the logbook all work offline. iCloud sync and sharing catch up whenever a connection is available." } },
+        { "@type": "Question", "name": "How are night driving hours worked out?", "acceptedAnswer": { "@type": "Answer", "text": "The app uses sunset and sunrise at the places along your recorded route. Time after sunset counts as night and is shown inside the drive's total. You can edit the night minutes on any drive." } },
+        { "@type": "Question", "name": "Will my licensing authority accept the PDF report?", "acceptedAnswer": { "@type": "Answer", "text": "The report lists every drive with its date, times, night hours and supervisor. It is for your records and doesn't replace an official logbook, app or form. Check what your licensing authority accepts before your test." } },
+        { "@type": "Question", "name": "What happens if the app closes during a drive?", "acceptedAnswer": { "@type": "Answer", "text": "Every drive is written to your device every 30 seconds while recording. If the app closes, the drive is recovered at the next launch, paused at its last saved time, and marked for review so you can check the finish time." } },
+        { "@type": "Question", "name": "Can a parent or supervisor see the logbook?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Invite them from Settings and they get a live copy of the logbook over iCloud, either view only or able to add drives. They need an iCloud account and the app." } },
+        { "@type": "Question", "name": "Does it work on Apple Watch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your iPhone is nearby. Complications show progress and a Start button." } },
+        { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On your device, in the app's own database, and in your own iCloud account when you're signed in to iCloud. If you share a logbook, the people you invite get a copy through iCloud too. There are no accounts with us, no analytics and no ads." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-car" viewBox="12 36 68 54"><path fill="currentColor" fill-rule="evenodd" d="M22 56 H26.65 L32 43 Q33 40 36 40 H58 Q61 40 62 43 L67.35 56 H70 A8 8 0 0 1 78 64 V76 A4 4 0 0 1 74 80 H73 V85 A3 3 0 0 1 70 88 H63 A3 3 0 0 1 60 85 V80 H32 V85 A3 3 0 0 1 29 88 H22 A3 3 0 0 1 19 85 V80 H18 A4 4 0 0 1 14 76 V64 A8 8 0 0 1 22 56 Z M31 54 L36 46 H58 L63 54 Z M20 68 A5 5 0 1 0 30 68 A5 5 0 1 0 20 68 Z M62 68 A5 5 0 1 0 72 68 A5 5 0 1 0 62 68 Z M40 66 H52 A2 2 0 0 1 52 70 H40 A2 2 0 0 1 40 66 Z"/></symbol>
+    <symbol id="i-ticks" viewBox="0 0 1024 1024"><g stroke="currentColor" fill="none"><line x1="512" y1="162" x2="512" y2="100" stroke-width="28"/><line x1="694" y1="196.8" x2="718" y2="155.2" stroke-width="18"/><line x1="827.2" y1="330" x2="868.8" y2="306" stroke-width="18"/><line x1="862" y1="512" x2="924" y2="512" stroke-width="28"/><line x1="827.2" y1="694" x2="868.8" y2="718" stroke-width="18"/><line x1="694" y1="827.2" x2="718" y2="868.8" stroke-width="18"/><line x1="512" y1="862" x2="512" y2="924" stroke-width="28"/><line x1="330" y1="827.2" x2="306" y2="868.8" stroke-width="18"/><line x1="196.8" y1="694" x2="155.2" y2="718" stroke-width="18"/><line x1="162" y1="512" x2="100" y2="512" stroke-width="28"/><line x1="196.8" y1="330" x2="155.2" y2="306" stroke-width="18"/><line x1="330" y1="196.8" x2="306" y2="155.2" stroke-width="18"/><circle cx="512" cy="512" r="300" stroke-width="62" opacity=".5"/></g></symbol>
+    <symbol id="i-rec" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2a10 10 0 1 1 0 20a10 10 0 1 1 0-20Zm0 5.2a4.8 4.8 0 1 0 0 9.6a4.8 4.8 0 1 0 0-9.6Z"/><circle cx="12" cy="12" r="3.3" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M14.5 2.5a9.5 9.5 0 1 0 7 15.6 8.3 8.3 0 0 1-7-15.6Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4.2" height="15" rx="1.3" fill="currentColor"/><rect x="13.8" y="4.5" width="4.2" height="15" rx="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.2v13.6a1 1 0 0 0 1.5.9l11-6.8a1 1 0 0 0 0-1.8l-11-6.8A1 1 0 0 0 8 5.2Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></g></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 18.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.5 4.5 0 0 1-.5 9Z"/></symbol>
+    <symbol id="i-person-plus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="3.6"/><path d="M3.5 20a6.5 6.5 0 0 1 13 0M19 9v6M16 12h6"/></g></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></g></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 10h17M3.5 14.5h17M10 5v14"/></g></symbol>
+    <symbol id="i-drive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="6" width="17" height="12" rx="2.5"/><circle cx="16.5" cy="12" r="1.3" fill="currentColor" stroke="none"/><path d="M3.5 12h17"/></g></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 21V4h11l-2 4 2 4H6"/></symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="6" y="6.5" width="12" height="11" rx="3"/><path d="M9 6.5 9.6 3h4.8L15 6.5M9 17.5l.6 3.5h4.8l.6-3.5"/></g></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4.5h11a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2zM5 17.5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M9 21h6"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="Driving Hour Tracker, home">
+      <img src="assets/icons/app-icon.svg" width="36" height="36" alt="">
+      <span>Driving Hour Tracker</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#devices">Devices</a>
+      <a href="#faq">FAQ</a>
+      <a href="support/">Support</a>
+    </nav>
+    <span class="nav-cta" id="navCta"><span class="long">Coming soon to the App Store</span><span class="short" aria-hidden="true">Coming soon</span></span>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="motif"><svg viewBox="0 0 1024 1024"><use href="#i-ticks"/></svg></div>
+    <div class="glow"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="lplate" aria-hidden="true">L</span>For learner drivers on iPhone, iPad and Apple Watch</p>
+      <h1 id="hero-title" class="display">
+        <span class="line"><span>Track your learner</span></span>
+        <span class="line"><span>driving hours.</span></span>
+        <span class="line"><span>Never lose a <em class="mark">drive</em>.</span></span>
+      </h1>
+      <p class="lede">Driving Hour Tracker is a learner driver logbook for iPhone. One tap times each supervised practice drive, night hours are worked out from sunset, every route goes on the map, and a tidy PDF report is always ready.</p>
+      <div class="actions">
+        <span class="btn btn-plate" id="heroCta"><svg class="i" width="20" height="20"><use href="#i-car"/></svg>Coming soon to the App Store</span>
+        <a class="btn btn-ghost" href="#how">See a drive, start to finish</a>
+      </div>
+      <ul class="proof" aria-label="Highlights">
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>No account</li>
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>No ads</li>
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Saves every 30 seconds</li>
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Works offline</li>
+      </ul>
+    </div>
+
+    <div class="hero-stage" id="heroStage" aria-hidden="true">
+      <div class="float float-a" data-depth="18">
+        <div class="row-card">
+          <span class="dot ok"><svg class="i" width="18" height="18"><use href="#i-check"/></svg></span>
+          <span><strong>Saved on this device</strong><small>Every 30 seconds, even if the app closes.</small></span>
+        </div>
+      </div>
+      <div class="float float-b" data-depth="26">
+        <div class="row-card">
+          <span class="dot night"><svg class="i" width="18" height="18"><use href="#i-moon"/></svg></span>
+          <span><strong>Counting as night</strong><small>Estimated from your route after sunset.</small></span>
+        </div>
+      </div>
+      <div class="float float-c" data-depth="34">
+        <div class="watch" style="--k:.7">
+          <div class="wbody">
+            <div class="band top"></div><div class="band bottom"></div>
+            <div class="case"></div><div class="glass"></div><div class="crown"></div><div class="wbutton"></div>
+            <div class="wscreen"><img src="assets/img/watch-recording.webp" width="208" height="248" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="iphone hero-phone" data-depth="8">
+        <div class="body">
+          <div class="edge"></div><div class="bezel"></div>
+          <div class="screen">
+            <img src="assets/img/iphone-recording.webp" width="440" height="956" alt="" fetchpriority="high">
+            <div class="timer-cover"><span id="heroTimer">0:04</span></div>
+            <div class="island"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="road" aria-hidden="true">
+    <div class="lane"></div>
+    <div class="road-car"><svg viewBox="12 36 68 54"><use href="#i-car"/></svg></div>
+  </div>
+</section>
+
+<!-- ============================== WHY ============================== -->
+<section class="why" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <p class="eyebrow light" data-reveal>Why we built it</p>
+    <h2 id="why-title" class="display-2" data-reveal>We read 280 reviews of the popular logbook apps before we wrote a line of code.</h2>
+    <p class="section-lede" data-reveal>The same four complaints kept coming up. Each one became a rule for this app.</p>
+    <div class="findings" data-reveal data-stagger>
+      <article class="finding">
+        <p class="complaint"><span class="x" aria-hidden="true">✕</span>Drives that vanished after a crash, or a finish flow that never saved.</p>
+        <h3>Every drive is kept, as you go.</h3>
+        <p>Recording is written to your iPhone every 30 seconds. Finishing saves straight away. Reviewing a drive is optional, never a second save step.</p>
+      </article>
+      <article class="finding">
+        <p class="complaint"><span class="x" aria-hidden="true">✕</span>Sign-ups, verification codes and cloud errors before a 20-minute drive.</p>
+        <h3>No account. Ever.</h3>
+        <p>Your logbook lives on your device first and syncs through your own iCloud when you're signed in. No sign-up, no verification codes, nothing to remember.</p>
+      </article>
+      <article class="finding">
+        <p class="complaint"><span class="x" aria-hidden="true">✕</span>Ads between you and the Start button.</p>
+        <h3>Nothing interrupts a drive.</h3>
+        <p>No ads, no pop-ups, no upsells while you're recording. Start, drive, finish.</p>
+      </article>
+      <article class="finding">
+        <p class="complaint"><span class="x" aria-hidden="true">✕</span>Totals that don't add up, and night hours that seem to count twice.</p>
+        <h3>Hours you can read at a glance.</h3>
+        <p>Hours and minutes everywhere, night always shown inside the total, and what's left to your goal on the front page.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== THE DRIVE (scroll-driven) ============================== -->
+<section class="drive" id="how" aria-labelledby="how-title">
+  <div class="drive-stage" id="driveStage">
+    <div class="sky"></div>
+    <div class="night-layer" id="nightLayer"></div>
+    <div class="grid-map" aria-hidden="true"></div>
+    <div class="sun" id="sun" aria-hidden="true"></div>
+    <div class="moon" id="moon" aria-hidden="true"></div>
+
+    <div class="live" id="live" aria-hidden="true">
+      <span class="live-car"><svg class="i" width="22" height="22"><use href="#i-car"/></svg></span>
+      <span class="live-title">Practice with Sam</span>
+      <span class="live-state"><svg class="i" width="13" height="13"><use href="#i-rec"/></svg>Recording</span>
+      <span class="live-timer" id="liveTimer">0:00</span>
+      <span class="live-bar"><i id="liveBar"></i></span>
+      <span class="live-cap" id="liveCap">62% of 100h goal</span>
+    </div>
+
+    <svg class="road-svg" id="roadSvg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path id="roadPath" class="asphalt" d="M -60 720 C 220 720, 300 470, 520 470 S 760 650, 960 560 S 1180 330, 1300 270 S 1440 200, 1520 160"/>
+      <path class="centre" d="M -60 720 C 220 720, 300 470, 520 470 S 760 650, 960 560 S 1180 330, 1300 270 S 1440 200, 1520 160"/>
+      <path id="trailDay" class="trail day" stroke-dasharray="0 9999" d="M -60 720 C 220 720, 300 470, 520 470 S 760 650, 960 560 S 1180 330, 1300 270 S 1440 200, 1520 160"/>
+      <path id="trailNight" class="trail night" stroke-dasharray="0 9999" d="M -60 720 C 220 720, 300 470, 520 470 S 760 650, 960 560 S 1180 330, 1300 270 S 1440 200, 1520 160"/>
+      <g id="car" class="car"><use href="#i-car" x="-34" y="-27" width="68" height="54"/></g>
+    </svg>
+
+    <div class="stops" aria-hidden="true">
+      <div class="stop" data-at="0.04" data-side="above">
+        <div class="ui-sheet">
+          <div class="ui-title">Practice with</div>
+          <div class="ui-person"><span class="avatar">S</span><span>Sam</span><svg class="i tick" width="18" height="18"><use href="#i-check"/></svg></div>
+          <div class="ui-btn"><svg class="i" width="18" height="18"><use href="#i-car"/></svg>Start drive</div>
+        </div>
+      </div>
+      <div class="stop" data-at="0.28" data-side="above">
+        <div class="row-card"><span class="dot ok"><svg class="i" width="18" height="18"><use href="#i-check"/></svg></span><span><strong>Saved on this device</strong><small>Every 30 seconds, even if the app closes.</small></span></div>
+      </div>
+      <div class="stop" data-at="0.52" data-side="below">
+        <div class="row-card"><span class="dot night"><svg class="i" width="18" height="18"><use href="#i-moon"/></svg></span><span><strong>Counting as night</strong><small>Sunset 5:52 PM, along your route.</small></span></div>
+      </div>
+      <div class="stop" data-at="0.74" data-side="above">
+        <div class="ui-sheet">
+          <div class="ui-title">Finished driving?</div>
+          <p class="ui-text">Saving in <b>4:59</b> unless you keep recording.</p>
+          <div class="ui-row"><span class="ui-btn tint"><svg class="i" width="16" height="16"><use href="#i-play"/></svg>Keep recording</span><span class="ui-btn"><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Finish</span></div>
+        </div>
+      </div>
+      <div class="stop" data-at="0.94" data-side="below">
+        <div class="ui-sheet saved">
+          <div class="ui-title"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Drive saved</div>
+          <div class="ui-big">45 min</div>
+          <div class="ui-split"><span class="day"><svg class="i" width="14" height="14"><use href="#i-sun"/></svg>Day 17 min</span><span class="night"><svg class="i" width="14" height="14"><use href="#i-moon"/></svg>Night 28 min</span></div>
+          <div class="ui-bars"><i class="d" style="--w:38%"></i><i class="n" style="--w:62%"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drive-copy">
+      <p class="eyebrow">One drive, start to finish</p>
+      <h2 id="how-title" class="display-3">What the app does while you drive.</h2>
+      <ol class="steps" id="steps">
+        <li class="step" data-at="0.04"><h3>One tap to start</h3><p>Pick who's supervising and go. The timer, the route and the supervisor are saved together as you drive.</p></li>
+        <li class="step" data-at="0.28"><h3>Saved as you go</h3><p>Every 30 seconds the drive is written to your iPhone, even if the app closes. A crash never costs you the drive.</p></li>
+        <li class="step" data-at="0.52"><h3>Sunset, counted</h3><p>When the sun sets where you are, the rest of the drive counts as night. No working it out at the end.</p></li>
+        <li class="step" data-at="0.74"><h3>Parked? It notices.</h3><p>Stop driving and the app offers to finish. Leave it and the drive is saved five minutes later. Or keep recording.</p></li>
+        <li class="step" data-at="0.94"><h3>Saved. Straight away.</h3><p>Finishing saves the drive immediately. Check or edit it later. There's no second save step to miss.</p></li>
+      </ol>
+      <p class="scroll-hint" id="scrollHint">Scroll to drive</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FEATURES ============================== -->
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Features</p>
+    <h2 id="features-title" class="display-2" data-reveal>Everything a logbook should do. Nothing that gets in the way.</h2>
+    <div class="bento">
+
+      <article class="tile t-notify" data-reveal>
+        <div class="tile-copy">
+          <h3>Knows when you're driving</h3>
+          <p>A nudge to record as you set off, and an automatic finish once you park. Detection is best effort and never ends a drive on its own.</p>
+        </div>
+        <div class="tile-art">
+          <div class="iphone" style="--k:.6">
+            <div class="body"><div class="edge"></div><div class="bezel"></div>
+              <div class="screen"><img src="assets/img/iphone-lockscreen-clean.webp" width="440" height="956" alt="The iPhone Lock Screen" loading="lazy"><div class="island"></div></div>
+            </div>
+          </div>
+          <div class="notif">
+            <img src="assets/icons/apple-touch-icon.png" width="38" height="38" alt="">
+            <div><div class="n-top"><b>Starting a practice drive?</b><span>now</span></div><div class="n-body">Start recording with your usual supervisor.</div></div>
+          </div>
+          <div class="notif-actions"><span>Review and start</span><span>Not now</span></div>
+          <div class="chip plate"><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Finishes 5 min after you park</div>
+        </div>
+      </article>
+
+      <article class="tile t-progress" data-reveal>
+        <div class="tile-copy">
+          <h3>Watch your hours add up</h3>
+          <p>Total and night hours against your own goals, with what's left to go.</p>
+        </div>
+        <div class="tile-art">
+          <div class="progress-card">
+            <div class="pc-head"><b>Total practice</b><span>Goal 100h</span></div>
+            <div class="pc-big" data-count="3770">0h 0m</div>
+            <div class="pc-bar"><i style="--w:62%"></i></div>
+            <div class="pc-cap">62% · 37h 10m to go</div>
+            <div class="pc-sep"></div>
+            <div class="pc-head"><b>Night practice</b><span>Goal 20h</span></div>
+            <div class="pc-big" data-count="866">0h 0m</div>
+            <div class="pc-bar"><i class="night" style="--w:72%"></i></div>
+            <div class="pc-cap">72% · 5h 34m to go</div>
+            <div class="pc-foot">Night is included in total practice.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-night" data-reveal>
+        <div class="tile-copy">
+          <h3>Night hours worked out</h3>
+          <p>Sunset where you drive splits every drive into day and night for you.</p>
+        </div>
+        <div class="tile-art">
+          <div class="horizon">
+            <div class="h-sky"></div>
+            <div class="h-sun"></div>
+            <div class="h-moon"></div>
+            <div class="h-ground"></div>
+          </div>
+          <div class="split-card">
+            <div class="sc-row"><span class="day"><svg class="i" width="18" height="18"><use href="#i-sun"/></svg>Day</span><b>17 min</b></div>
+            <div class="sc-row"><span class="night"><svg class="i" width="18" height="18"><use href="#i-moon"/></svg>Night</span><b>28 min</b></div>
+            <div class="sc-foot">Night is included in total. Estimated from your route.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-map" data-reveal>
+        <div class="tile-copy">
+          <h3>Every route on the map</h3>
+          <p>See where each drive went, with the distance on every one. Routes stay in your logbook and are left out of reports.</p>
+          <div class="chip-row"><span class="chip"><svg class="i" width="16" height="16"><use href="#i-map"/></svg>Route distance <b>15.2 km</b></span></div>
+        </div>
+        <div class="tile-art">
+          <div class="iphone" style="--k:.66">
+            <div class="body"><div class="edge"></div><div class="bezel"></div>
+              <div class="screen">
+                <video class="clip" muted playsinline loop preload="none" poster="assets/img/iphone-route-map.webp" aria-label="A drive route drawing itself on the map">
+                  <source src="assets/video/route-map.mp4" type="video/mp4">
+                </video>
+                <img class="poster" src="assets/img/iphone-route-map.webp" width="440" height="956" alt="A drive route drawn on a map from Bardon to the finish flag" loading="lazy">
+                <div class="island"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-siri" data-reveal>
+        <div class="tile-copy">
+          <h3>Just ask Siri</h3>
+          <p>Start, pause and finish drives hands-free, or ask how many hours you have. A Control Center toggle starts and finishes drives too.</p>
+        </div>
+        <div class="tile-art">
+          <div class="iphone" style="--k:.6">
+            <div class="body"><div class="edge"></div><div class="bezel"></div>
+              <div class="screen siri-screen">
+                <img src="assets/img/iphone-home-live.webp" width="440" height="956" alt="" loading="lazy">
+                <div class="dim"></div>
+                <div class="siri-edge"></div>
+                <div class="siri-card">
+                  <div class="app"><img src="assets/icons/apple-touch-icon.png" width="22" height="22" alt="">Driving Hour Tracker</div>
+                  <div class="ask" id="siriAsk">“Start practice with Driving Hour Tracker”</div>
+                  <div class="reply" id="siriReply">Practice drive started.</div>
+                </div>
+                <div class="siri-orb"></div>
+                <div class="island"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-island" data-reveal>
+        <div class="tile-copy">
+          <h3>Your drive at a glance</h3>
+          <p>A Live Activity on the Lock Screen and in the Dynamic Island, with the timer and your goal.</p>
+        </div>
+        <div class="tile-art">
+          <div class="island-stage" id="islandStage">
+            <div class="di" id="di">
+              <div class="layer" id="diCompact">
+                <svg class="ring" width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="9.4" fill="none" stroke="rgba(242,243,245,.24)" stroke-width="3"/><circle id="diArc" cx="11" cy="11" r="9.4" fill="none" stroke="#F2F3F5" stroke-width="3" stroke-linecap="round" transform="rotate(-90 11 11)" stroke-dasharray="0 100"/><circle cx="11" cy="11" r="3.96" fill="#FF8A7F"/></svg>
+                <span class="c-time" id="diCTime">12:45</span>
+              </div>
+              <div class="layer" id="diExpanded">
+                <div class="e-left"><div class="e-status"><svg class="i" width="14" height="14"><use href="#i-rec"/></svg>Recording</div><div class="e-title">Practice with Sam</div></div>
+                <div class="e-time" id="diETime">12:45</div>
+                <div class="e-goal"><div class="goal-bar"><i id="diBar"></i></div><div class="goal-cap">63% of 100h goal</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="lock-crop"><img src="assets/img/iphone-lockscreen-live.webp" width="440" height="956" alt="The Lock Screen Live Activity: Practice with Sam, Recording, 12:45, 63% of 100h goal" loading="lazy"></div>
+        </div>
+      </article>
+
+      <article class="tile t-watch" data-reveal>
+        <div class="tile-copy">
+          <h3>Start from your wrist</h3>
+          <p>Pick your supervisor, then start, pause or finish on Apple Watch. Complications show your progress.</p>
+        </div>
+        <div class="tile-art">
+          <div class="watch" style="--k:1">
+            <div class="wbody">
+              <div class="band top"></div><div class="band bottom"></div>
+              <div class="case"></div><div class="glass"></div><div class="crown"></div><div class="wbutton"></div>
+              <div class="wscreen" id="watchScreen">
+                <img src="assets/img/watch-start.webp" width="208" height="248" alt="The watch app's Start drive screen" loading="lazy">
+                <img src="assets/img/watch-recording.webp" width="208" height="248" alt="Recording on Apple Watch: 13:03 with Sam" loading="lazy">
+                <img src="assets/img/watch-autostop.webp" width="208" height="248" alt="The watch asks whether you've finished driving" loading="lazy">
+                <img src="assets/img/watch-dashboard.webp" width="208" height="248" alt="Your hours on the watch" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-share" data-reveal>
+        <div class="tile-copy">
+          <h3>Invite your supervisor</h3>
+          <p>They get a live copy over iCloud, view only or able to add drives. Inviting is optional; a supervisor can also be just a name on your drives.</p>
+        </div>
+        <div class="tile-art">
+          <div class="people" data-stagger>
+            <div class="person"><span class="avatar plate">M</span><span><b>Maya</b><small>You · Owner</small></span></div>
+            <div class="person"><span class="avatar">S</span><span><b>Sam</b><small><svg class="i" width="14" height="14"><use href="#i-lock"/></svg>View only</small></span></div>
+            <div class="person"><span class="avatar">J</span><span><b>Jordan</b><small>Can add and edit drives</small></span></div>
+            <div class="person cloud"><span class="avatar icloud"><svg class="i" width="22" height="22"><use href="#i-cloud"/></svg></span><span><b>iCloud</b><small class="ok"><svg class="i" width="13" height="13"><use href="#i-check"/></svg>Signed in. Changes sync automatically.</small></span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-report" data-reveal>
+        <div class="tile-copy">
+          <h3>A tidy report to share</h3>
+          <p>A PDF of every drive with date, times, night hours and supervisor. For your records; it doesn't replace any official form.</p>
+          <div class="chip-row">
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-doc"/></svg>PDF report</span>
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-table"/></svg>CSV</span>
+          </div>
+        </div>
+        <div class="tile-art">
+          <div class="paper" id="paper"><img src="assets/img/report-page-1.webp" width="800" height="1132" alt="The first page of the exported PDF driving logbook" loading="lazy"></div>
+        </div>
+      </article>
+
+      <article class="tile t-backup" data-reveal>
+        <div class="tile-copy">
+          <h3>Your data, your copy</h3>
+          <p>Save a backup with everything, routes included, and restore it on any iPhone or iPad. Import a spreadsheet of drives you logged elsewhere.</p>
+          <div class="chip-row">
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-drive"/></svg>Backup and restore</span>
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-table"/></svg>Import CSV</span>
+          </div>
+        </div>
+        <div class="tile-art">
+          <div class="iphone peek" style="--k:.6">
+            <div class="body"><div class="edge"></div><div class="bezel"></div>
+              <div class="screen"><img src="assets/img/iphone-data-tools.webp" width="440" height="956" alt="Export and backup: PDF report, spreadsheet, backup, restore and import" loading="lazy"><div class="island"></div></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DEVICES ============================== -->
+<section class="devices" id="devices" aria-labelledby="devices-title">
+  <div class="wrap">
+    <p class="eyebrow light" data-reveal>Devices</p>
+    <h2 id="devices-title" class="display-2" data-reveal>On iPhone, iPad, Apple Watch and iPhone Duo.</h2>
+    <p class="section-lede" data-reveal>One logbook, everywhere you are. The iPhone records; the watch and iPad follow along.</p>
+  </div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Screens on each device, scroll sideways">
+    <figure class="dev dev-iphone">
+      <div class="iphone" style="--k:.62"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="assets/img/iphone-logbook.webp" width="440" height="956" alt="The logbook on iPhone: 62h 50m total, 14h 26m at night, and October's drives" loading="lazy"><div class="island"></div></div></div></div>
+      <figcaption>iPhone</figcaption>
+    </figure>
+    <figure class="dev dev-ipad">
+      <div class="ipad" style="--k:.4"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="cam"></div><div class="screen"><img src="assets/img/ipad-recording.webp" width="1032" height="1376" alt="Recording a drive on iPad" loading="lazy"></div></div></div>
+      <figcaption>iPad</figcaption>
+    </figure>
+    <figure class="dev dev-watch">
+      <div class="watch" style="--k:1.1"><div class="wbody"><div class="band top"></div><div class="band bottom"></div><div class="case"></div><div class="glass"></div><div class="crown"></div><div class="wbutton"></div><div class="wscreen"><img src="assets/img/watch-dashboard.webp" width="208" height="248" alt="Your hours on Apple Watch" loading="lazy"></div></div></div>
+      <figcaption>Apple Watch</figcaption>
+    </figure>
+    <figure class="dev dev-duo">
+      <img class="duo" src="assets/img/duo-open-progress.webp" width="831" height="1162" alt="Progress on iPhone Duo, opened out" loading="lazy">
+      <figcaption>iPhone Duo, open</figcaption>
+    </figure>
+    <figure class="dev dev-duo-folded">
+      <img class="duo" src="assets/img/duo-folded-recording.webp" width="602" height="835" alt="Recording on the outer screen of iPhone Duo" loading="lazy">
+      <figcaption>iPhone Duo, folded</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================== GOALS ============================== -->
+<section class="goals" id="goals" aria-labelledby="goals-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Your goals</p>
+    <h2 id="goals-title" class="display-2" data-reveal>Set your own target. The app counts down to it.</h2>
+    <p class="section-lede" data-reveal>Learner hour requirements differ by country and state, and some authorities require their own logbook, app or form. So the goals are yours to set, and the front page always shows what's left.</p>
+    <div class="goal-grid" data-reveal data-stagger>
+      <article class="goal">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="50"/><circle class="arc total" pathLength="1" cx="60" cy="60" r="50" style="--pct:.62"/><circle class="arc night" pathLength="1" cx="60" cy="60" r="38" style="--pct:.72"/></svg>
+        <h3>120 hours, 20 at night</h3>
+        <p>A common target for learners under 25 in New South Wales and Victoria.</p>
+      </article>
+      <article class="goal">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="50"/><circle class="arc total" pathLength="1" cx="60" cy="60" r="50" style="--pct:.45"/><circle class="arc night" pathLength="1" cx="60" cy="60" r="38" style="--pct:.3"/></svg>
+        <h3>100 hours, 10 at night</h3>
+        <p>What Queensland asks of learners under 25.</p>
+      </article>
+      <article class="goal">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="50"/><circle class="arc total" pathLength="1" cx="60" cy="60" r="50" style="--pct:.8"/><circle class="arc night" pathLength="1" cx="60" cy="60" r="38" style="--pct:.5"/></svg>
+        <h3>50 hours, 10 at night</h3>
+        <p>Typical for a teen learner's permit in many US states.</p>
+      </article>
+    </div>
+    <p class="fine" data-reveal>Examples only. Check your licensing authority's current requirements and what records it accepts. The app's report is for your own records and doesn't replace an official logbook or form.</p>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <p class="eyebrow" data-reveal>Questions</p>
+    <h2 id="faq-title" class="display-2" data-reveal>Before you start your first drive.</h2>
+    <div class="faq-list" data-reveal data-stagger>
+      <details class="faq-item"><summary>Do I need an account to log my driving hours?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>No. Open the app, type the learner's name and a first supervisor, and start your first drive. The logbook is saved on your iPhone or iPad first. If you're signed in to iCloud it also syncs to your own iCloud account, so it's on your iPad too and you can share it with a supervisor.</p></div></details>
+      <details class="faq-item"><summary>Does the app work without an internet connection?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Recording, the timer, night estimates and the logbook all work offline. iCloud sync and sharing catch up whenever a connection is available.</p></div></details>
+      <details class="faq-item"><summary>How are night driving hours worked out?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The app uses sunset and sunrise at the places along your recorded route. Time after sunset counts as night and is shown inside the drive's total. You can edit the night minutes on any drive, and a drive with no route is flagged so you can add them.</p></div></details>
+      <details class="faq-item"><summary>Will my licensing authority accept the PDF report?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The report lists every drive with its date, times, night hours and supervisor. It is for your records and doesn't replace an official logbook, app or form. Check what your licensing authority accepts before your test.</p></div></details>
+      <details class="faq-item"><summary>What happens if the app closes during a drive?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Every drive is written to your device every 30 seconds while recording. If the app closes, the drive is recovered at the next launch, paused at its last saved time, and marked for review so you can check the finish time. If a save ever fails, the recording stays on the device and you can share a recovery file.</p></div></details>
+      <details class="faq-item"><summary>Can a parent or supervisor see the logbook?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Invite them from Settings and they get a live copy of the logbook over iCloud, either view only or able to add drives. They need an iCloud account and the app. Adding a supervisor's name alone doesn't share anything.</p></div></details>
+      <details class="faq-item"><summary>Does it work on Apple Watch?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your iPhone is nearby. Complications show progress and a Start button.</p></div></details>
+      <details class="faq-item"><summary>Where is my data stored?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>On your device, in the app's own database, and in your own iCloud account when you're signed in to iCloud. If you share a logbook, the people you invite get a copy through iCloud too. There are no accounts with us, no analytics and no ads. See the <a href="privacy/">privacy policy</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="cta" aria-labelledby="cta-title">
+  <div class="cta-motif" aria-hidden="true"><svg viewBox="0 0 1024 1024"><use href="#i-ticks"/></svg></div>
+  <div class="wrap cta-row">
+    <div>
+      <h2 id="cta-title" class="display-2" data-reveal>Your first drive is one tap away.</h2>
+      <p class="section-lede" data-reveal>Driving Hour Tracker is coming to the App Store for iPhone, iPad and Apple Watch.</p>
+      <div class="actions" data-reveal>
+        <span class="btn btn-ink"><svg class="i" width="20" height="20"><use href="#i-car"/></svg>Coming soon to the App Store</span>
+        <a class="btn btn-ghost-ink" href="support/">Questions? Visit support</a>
+      </div>
+    </div>
+    <div class="cta-car" aria-hidden="true" data-reveal><svg viewBox="12 36 68 54"><use href="#i-car"/></svg></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-row">
+    <a class="brand" href="#top"><img src="assets/icons/app-icon.svg" width="28" height="28" alt="">Driving Hour Tracker</a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="privacy/">Privacy</a>
+      <a href="support/">Support</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <p class="foot-note">© 2026 KarmaAcademy. Apple, iPhone, iPad, Apple Watch, Siri and iCloud are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
