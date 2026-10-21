@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Driving Hour Tracker: learner driver logbook app for iPhone, iPad and Apple Watch</title>
-<meta name="description" content="Track your learner driving hours on iPhone. One tap records every supervised practice drive, night hours are worked out from sunset, routes go on the map, and your supervisor can follow along on their own iPhone over iCloud. No account, no ads.">
+<title>Driving Hour Tracker: learner driver logbook app for iPhone and Android</title>
+<meta name="description" content="A learner driver logbook app for iPhone and Android. One tap logs every supervised practice drive, night hours are worked out from sunset, routes go on the map, and a PDF report of your driving hours is always ready. No account, no ads.">
 <link rel="canonical" href="https://drivinghourtracker.karmafy.com.au/">
 <meta name="theme-color" content="#FFC72C">
 <meta name="color-scheme" content="light">
@@ -12,20 +12,21 @@
 <meta name="apple-itunes-app" content="app-id=6819568713">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Driving Hour Tracker">
-<meta property="og:title" content="Driving Hour Tracker: the learner driver logbook that never loses a drive">
-<meta property="og:description" content="Time every supervised drive, count night hours automatically and share the logbook with your supervisor over iCloud. For iPhone, iPad and Apple Watch. No account, no ads.">
+<meta property="og:title" content="Driving Hour Tracker: the learner driver logbook app for iPhone and Android">
+<meta property="og:description" content="Log every supervised drive with one tap, count night hours automatically and keep a tidy driving logbook. For iPhone, iPad, Apple Watch, Android and Wear OS. No account, no ads.">
 <meta property="og:url" content="https://drivinghourtracker.karmafy.com.au/">
 <meta property="og:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
 <meta property="og:image:alt" content="Track your learner driving hours: three iPhones showing progress, a drive being recorded and the logbook.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Driving Hour Tracker: the learner driver logbook that never loses a drive">
-<meta name="twitter:description" content="Time every supervised drive, count night hours automatically and share the logbook with your supervisor. No account, no ads.">
+<meta name="twitter:title" content="Driving Hour Tracker: the learner driver logbook app for iPhone and Android">
+<meta name="twitter:description" content="Log every supervised drive with one tap, count night hours automatically and keep a tidy driving logbook on iPhone or Android. No account, no ads.">
 <meta name="twitter:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
 <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="preload" as="image" href="assets/img/iphone-recording.webp">
+<link rel="preload" as="image" href="assets/img/android-progress.webp">
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
 {
@@ -50,40 +51,48 @@
       "@type": ["SoftwareApplication", "MobileApplication"],
       "@id": "https://drivinghourtracker.karmafy.com.au/#app",
       "name": "Driving Hour Tracker",
-      "alternateName": "Driving Hour Tracker learner logbook",
-      "description": "A learner driver logbook for iPhone, iPad and Apple Watch. Records supervised practice drives, works out night hours from sunset, maps routes and exports a PDF report.",
+      "alternateName": ["Driving Hour Tracker learner logbook", "Driving Hours Tracker"],
+      "description": "A learner driver logbook app for iPhone, iPad, Apple Watch, Android and Wear OS. Records supervised practice drives with one tap, works out night hours from sunset, maps every route and exports a PDF report of your driving hours.",
       "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "iOS 26, iPadOS 26, watchOS 26",
+      "operatingSystem": "iOS, iPadOS, watchOS, Android, Wear OS",
       "url": "https://drivinghourtracker.karmafy.com.au/",
-      "installUrl": "https://apps.apple.com/app/id6819568713",
-      "sameAs": "https://apps.apple.com/app/id6819568713",
+      "installUrl": ["https://apps.apple.com/app/id6819568713", "https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"],
+      "downloadUrl": ["https://apps.apple.com/app/id6819568713", "https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"],
+      "sameAs": ["https://apps.apple.com/app/id6819568713", "https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"],
       "image": "https://drivinghourtracker.karmafy.com.au/assets/icons/icon-192.png",
       "author": { "@id": "https://drivinghourtracker.karmafy.com.au/#org" },
+      "offers": [
+        { "@type": "Offer", "name": "App Store (iPhone, iPad and Apple Watch)", "url": "https://apps.apple.com/app/id6819568713" },
+        { "@type": "Offer", "name": "Google Play (Android and Wear OS)", "url": "https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly", "price": "7.99", "priceCurrency": "USD" }
+      ],
       "featureList": [
-        "One-tap recording of supervised practice drives",
+        "One-tap recording of supervised practice drives, saved to the device every 30 seconds",
         "Night driving hours estimated from sunset along the route",
         "Driving detection that suggests starting and finishes after you park",
-        "Route maps with distance for every drive",
-        "Total and night goals with progress",
-        "Siri, Shortcuts and Control Center",
-        "Live Activity on the Lock Screen and in the Dynamic Island",
+        "Route maps with distance for every drive: Apple Maps on iPhone, Google Maps on Android",
+        "Total and night hour goals with progress and monthly charts",
+        "PDF report, CSV export and import, backup and restore; a backup moves between iPhone and Android",
+        "iPhone: Siri, Shortcuts, Control Center, widgets, and a Live Activity on the Lock Screen and in the Dynamic Island",
+        "iPhone and iPad: iCloud sync and logbook sharing with a supervisor, view only or able to add drives",
         "Apple Watch app with complications",
-        "Logbook sharing with a supervisor over iCloud, by Apple Account email, view only or able to add drives",
-        "PDF report, CSV export, backup and restore"
+        "Android: home-screen widget, Quick Settings tile, app shortcuts, a live timer in the notification shade, and starting from your car's Bluetooth",
+        "Wear OS app with a tile and complications"
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://drivinghourtracker.karmafy.com.au/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Do I need an account to log my driving hours?", "acceptedAnswer": { "@type": "Answer", "text": "No. Open the app, type the learner's name and a first supervisor, and start your first drive. The logbook is saved on your iPhone or iPad first. If you're signed in to iCloud it also syncs to your own iCloud account, so it's on your iPad too and you can share it with a supervisor." } },
-        { "@type": "Question", "name": "Does the app work without an internet connection?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Recording, the timer, night estimates and the logbook all work offline. iCloud sync and sharing catch up whenever a connection is available." } },
+        { "@type": "Question", "name": "Do I need an account to log my driving hours?", "acceptedAnswer": { "@type": "Answer", "text": "No. Open the app, type the learner's name and a first supervisor, and start your first drive. The logbook is saved on your phone first. On iPhone and iPad, signing in to iCloud also syncs it to your own iCloud account, so it's on your iPad too and you can share it with a supervisor. On Android it stays on the phone, and a backup file goes wherever you keep it." } },
+        { "@type": "Question", "name": "Is Driving Hour Tracker on Android?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The same learner driver logbook app is on Google Play for Android phones and tablets running Android 14 or later, with a Wear OS companion app. Recording, night hours, goals, routes, reports and backups work the same as on iPhone. iCloud sync and logbook sharing are iPhone and iPad features; Android has a home-screen widget, a Quick Settings tile, app shortcuts and an option to start from your car's Bluetooth instead." } },
+        { "@type": "Question", "name": "Does the app work without an internet connection?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Recording, the timer, night estimates and the logbook all work offline. On iPhone, iCloud sync and sharing catch up whenever a connection is available. On Android, the map behind a route needs a connection to load; the route itself is saved either way." } },
         { "@type": "Question", "name": "How are night driving hours worked out?", "acceptedAnswer": { "@type": "Answer", "text": "The app uses sunset and sunrise at the places along your recorded route. Time after sunset counts as night and is shown inside the drive's total. You can edit the night minutes on any drive." } },
         { "@type": "Question", "name": "Will my licensing authority accept the PDF report?", "acceptedAnswer": { "@type": "Answer", "text": "The report lists every drive with its date, times, night hours and supervisor. It is for your records and doesn't replace an official logbook, app or form. Check what your licensing authority accepts before your test." } },
         { "@type": "Question", "name": "What happens if the app closes during a drive?", "acceptedAnswer": { "@type": "Answer", "text": "Every drive is written to your device every 30 seconds while recording. If the app closes, the drive is recovered at the next launch, paused at its last saved time, and marked for review so you can check the finish time." } },
-        { "@type": "Question", "name": "Can a parent or supervisor see the logbook?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open Sharing from Settings, add their Apple Account email, choose view only or can add drives, and send them the invitation link. The logbook appears under Shared with me on their iPhone or iPad and stays in step over iCloud. They need the app and an iCloud account." } },
-        { "@type": "Question", "name": "Does it work on Apple Watch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your iPhone is nearby. Complications show progress and a Start button." } },
-        { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On your device, in the app's own database, and in your own iCloud account when you're signed in to iCloud. If you share a logbook, the people you invite get a copy through iCloud too. There are no accounts with us, no analytics and no ads." } }
+        { "@type": "Question", "name": "Can a parent or supervisor see the logbook?", "acceptedAnswer": { "@type": "Answer", "text": "On iPhone and iPad, yes. Open Sharing from Settings, add their Apple Account email, choose view only or can add drives, and send them the invitation link. The logbook appears under Shared with me on their iPhone or iPad and stays in step over iCloud. On Android, sharing isn't available: send them the PDF report, or a backup file to restore in their own copy of the app." } },
+        { "@type": "Question", "name": "Can I move my logbook between iPhone and Android?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Save a backup on one phone, open it with the app on the other and choose Restore. A backup made on iPhone restores on Android and the other way round, routes included. iCloud sync and sharing aren't part of a backup." } },
+        { "@type": "Question", "name": "Does it work on Apple Watch or Wear OS?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, both. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your phone is nearby. Apple Watch complications show your progress and a Start button; on Wear OS, a tile and complications do the same." } },
+        { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On your device, in the app's own database. On iPhone and iPad it also syncs to your own iCloud account when you're signed in, and the people you share with get a copy through iCloud. On Android it stays on the phone, plus any backup files you save. There are no accounts with us, no analytics and no ads." } }
       ]
     }
   ]
@@ -117,6 +126,9 @@
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4.5h11a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2zM5 17.5a2 2 0 0 1 2-2h11"/></symbol>
     <symbol id="i-person" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="10" r="3"/><path d="M6.3 18.6c1.3-2.2 3.3-3.4 5.7-3.4s4.4 1.2 5.7 3.4"/></g></symbol>
+    <symbol id="i-bluetooth" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6.5 7.5 17.5 16.5 12 21.5V2.5l5.5 5-11 9"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></g></symbol>
+    <symbol id="i-toggle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="2.6" fill="currentColor" stroke="none"/></g></symbol>
     <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M9 21h6"/></g></symbol>
   </defs>
 </svg>
@@ -132,10 +144,11 @@
       <a href="#features">Features</a>
       <a href="#sharing">Sharing</a>
       <a href="#devices">Devices</a>
+      <a href="android/">Android</a>
       <a href="#faq">FAQ</a>
       <a href="support/">Support</a>
     </nav>
-    <a class="nav-cta" id="navCta" href="https://apps.apple.com/app/id6819568713"><span class="long">Download on the App Store</span><span class="short" aria-hidden="true">App Store</span></a>
+    <a class="nav-cta" id="navCta" href="#download"><span class="long">Get the app</span><span class="short" aria-hidden="true">Get it</span></a>
   </div>
 </header>
 
@@ -150,15 +163,16 @@
 
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="lplate" aria-hidden="true">L</span>For learner drivers on iPhone, iPad and Apple Watch</p>
+      <p class="eyebrow"><span class="lplate" aria-hidden="true">L</span>For learner drivers on iPhone and Android</p>
       <h1 id="hero-title" class="display">
         <span class="line"><span>Track your learner</span></span>
         <span class="line"><span>driving hours.</span></span>
         <span class="line"><span>Never lose a <em class="mark">drive</em>.</span></span>
       </h1>
-      <p class="lede">Driving Hour Tracker is a learner driver logbook for iPhone. One tap times each supervised practice drive, night hours are worked out from sunset, every route goes on the map, and a tidy PDF report is always ready. Invite your supervisor and they see every drive on their own iPhone.</p>
-      <div class="actions">
-        <a class="btn btn-plate" id="heroCta" href="https://apps.apple.com/app/id6819568713"><svg class="i" width="20" height="20"><use href="#i-car"/></svg>Download on the App Store</a>
+      <p class="lede">Driving Hour Tracker is a learner driver logbook app for iPhone and Android. One tap times each supervised practice drive, night hours are worked out from sunset, every route goes on the map, and a tidy PDF report of your driving hours is always ready. On iPhone, invite your supervisor and they see every drive on their own phone.</p>
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/app/id6819568713"><img src="assets/badges/app-store.svg" width="150" height="50" alt="Download on the App Store"></a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"><img src="assets/badges/google-play.svg" width="169" height="50" alt="Get it on Google Play"></a>
         <a class="btn btn-ghost" href="#how">See a drive, start to finish</a>
       </div>
       <ul class="proof" aria-label="Highlights">
@@ -191,6 +205,11 @@
           </div>
         </div>
       </div>
+      <div class="aphone hero-android" data-depth="14">
+        <div class="body"><div class="edge"></div><div class="bezel"></div>
+          <div class="screen"><img src="assets/img/android-progress.webp" width="412" height="916" alt=""><div class="hole"></div></div>
+        </div>
+      </div>
       <div class="iphone hero-phone" data-depth="8">
         <div class="body">
           <div class="edge"></div><div class="bezel"></div>
@@ -220,12 +239,12 @@
       <article class="finding">
         <p class="complaint"><span class="x" aria-hidden="true">✕</span>Drives that vanished after a crash, or a finish flow that never saved.</p>
         <h3>Every drive is kept, as you go.</h3>
-        <p>Recording is written to your iPhone every 30 seconds. Finishing saves straight away. Reviewing a drive is optional, never a second save step.</p>
+        <p>Recording is written to your phone every 30 seconds. Finishing saves straight away. Reviewing a drive is optional, never a second save step.</p>
       </article>
       <article class="finding">
         <p class="complaint"><span class="x" aria-hidden="true">✕</span>Sign-ups, verification codes and cloud errors before a 20-minute drive.</p>
         <h3>No account. Ever.</h3>
-        <p>Your logbook lives on your device first and syncs through your own iCloud when you're signed in. No sign-up, no verification codes, nothing to remember.</p>
+        <p>Your logbook lives on your phone first. On iPhone it syncs through your own iCloud when you're signed in; on Android it stays on the device. No sign-up, no verification codes, nothing to remember.</p>
       </article>
       <article class="finding">
         <p class="complaint"><span class="x" aria-hidden="true">✕</span>Ads between you and the Start button.</p>
@@ -303,7 +322,7 @@
       <h2 id="how-title" class="display-3">What the app does while you drive.</h2>
       <ol class="steps" id="steps">
         <li class="step" data-at="0.04"><h3>One tap to start</h3><p>Pick who's supervising and go. The timer, the route and the supervisor are saved together as you drive.</p></li>
-        <li class="step" data-at="0.28"><h3>Saved as you go</h3><p>Every 30 seconds the drive is written to your iPhone, even if the app closes. A crash never costs you the drive.</p></li>
+        <li class="step" data-at="0.28"><h3>Saved as you go</h3><p>Every 30 seconds the drive is written to your phone, even if the app closes. A crash never costs you the drive.</p></li>
         <li class="step" data-at="0.52"><h3>Sunset, counted</h3><p>When the sun sets where you are, the rest of the drive counts as night. No working it out at the end.</p></li>
         <li class="step" data-at="0.74"><h3>Parked? It notices.</h3><p>Stop driving and the app offers to finish. Leave it and the drive is saved five minutes later. Or keep recording.</p></li>
         <li class="step" data-at="0.94"><h3>Saved. Straight away.</h3><p>Finishing saves the drive immediately. Check or edit it later. There's no second save step to miss.</p></li>
@@ -318,12 +337,13 @@
   <div class="wrap">
     <p class="eyebrow" data-reveal>Features</p>
     <h2 id="features-title" class="display-2" data-reveal>Everything a logbook should do. Nothing that gets in the way.</h2>
+    <p class="section-lede" data-reveal>Everything below is on both iPhone and Android unless a label says otherwise.</p>
     <div class="bento">
 
       <article class="tile t-notify" data-reveal>
         <div class="tile-copy">
           <h3>Knows when you're driving</h3>
-          <p>A nudge to record as you set off, and an automatic finish once you park. Detection is best effort and never ends a drive on its own.</p>
+          <p>A nudge to record as you set off, and an automatic finish once you park. iPhone uses motion and location; Android uses physical activity only, never background location. Detection is best effort and never ends a drive on its own.</p>
         </div>
         <div class="tile-art">
           <div class="iphone" style="--k:.6">
@@ -384,7 +404,7 @@
       <article class="tile t-map" data-reveal>
         <div class="tile-copy">
           <h3>Every route on the map</h3>
-          <p>See where each drive went, with the distance on every one. Routes stay in your logbook and are left out of reports.</p>
+          <p>See where each drive went, with the distance on every one: Apple Maps on iPhone, Google Maps on Android. Routes stay in your logbook and are left out of reports.</p>
           <div class="chip-row"><span class="chip"><svg class="i" width="16" height="16"><use href="#i-map"/></svg>Route distance <b>15.2 km</b></span></div>
         </div>
         <div class="tile-art">
@@ -399,11 +419,55 @@
               </div>
             </div>
           </div>
+          <div class="aphone">
+            <div class="body"><div class="edge"></div><div class="bezel"></div>
+              <div class="screen"><img src="assets/img/android-drive-map.webp" width="412" height="916" alt="The same drive on Android: 45 minutes with 45 minutes at night, and the route drawn on Google Maps" loading="lazy"><div class="hole"></div></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-android" data-reveal>
+        <div class="tile-copy">
+          <span class="plat">Android</span>
+          <h3>Start from anywhere on Android</h3>
+          <p>A home-screen widget with your progress and a Start button, a Practice drive tile in Quick Settings, and press-and-hold shortcuts on the app icon. While you record, the live timer sits in your notifications.</p>
+          <div class="chip-row">
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-grid"/></svg>Widget</span>
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-toggle"/></svg>Quick Settings tile</span>
+            <span class="chip"><svg class="i" width="16" height="16"><use href="#i-bell"/></svg>Live timer</span>
+          </div>
+        </div>
+        <div class="tile-art droid-stage" data-reveal data-stagger>
+          <div class="d-widget">
+            <div class="dw-head"><img src="assets/icons/apple-touch-icon.png" width="20" height="20" alt="">Practice progress</div>
+            <div class="dw-big">62h 50m</div>
+            <div class="dw-bar"><i style="--w:62%"></i></div>
+            <div class="dw-cap">62% of 100h goal · Night 72% of 20h</div>
+            <div class="dw-btn"><svg class="i" width="18" height="18"><use href="#i-car"/></svg>Start drive</div>
+          </div>
+          <div class="d-tile"><span class="dt-icon"><svg class="i" width="20" height="20"><use href="#i-car"/></svg></span><span><b>Practice drive</b><small>Recording</small></span></div>
+          <div class="d-notif">
+            <img src="assets/icons/apple-touch-icon.png" width="34" height="34" alt="">
+            <div class="dn-body">
+              <div class="dn-top"><b>Practice with Sam</b><span><svg class="i" width="12" height="12"><use href="#i-rec"/></svg>Recording</span></div>
+              <div class="dn-time">12:45</div>
+              <div class="dn-bar"><i></i></div>
+              <div class="dn-cap">63% of 100h goal</div>
+            </div>
+          </div>
+          <div class="d-shortcuts">
+            <small>Press and hold the icon</small>
+            <span><i class="si"><svg class="i" width="16" height="16"><use href="#i-car"/></svg></i>Start practice</span>
+            <span><i class="si"><svg class="i" width="16" height="16"><use href="#i-plus"/></svg></i>Log a drive</span>
+            <span><i class="si"><svg class="i" width="16" height="16"><use href="#i-person"/></svg></i>Start with Sam</span>
+          </div>
         </div>
       </article>
 
       <article class="tile t-siri" data-reveal>
         <div class="tile-copy">
+          <span class="plat">iPhone</span>
           <h3>Just ask Siri</h3>
           <p>Start, pause and finish drives hands-free, or ask how many hours you have. A Control Center toggle starts and finishes drives too.</p>
         </div>
@@ -429,8 +493,9 @@
 
       <article class="tile t-island" data-reveal>
         <div class="tile-copy">
+          <span class="plat">iPhone</span>
           <h3>Your drive at a glance</h3>
-          <p>A Live Activity on the Lock Screen and in the Dynamic Island, with the timer and your goal.</p>
+          <p>A Live Activity on the Lock Screen and in the Dynamic Island, with the timer and your goal. On Android the same timer lives in the notification shade.</p>
         </div>
         <div class="tile-art">
           <div class="island-stage" id="islandStage">
@@ -452,8 +517,9 @@
 
       <article class="tile t-watch" data-reveal>
         <div class="tile-copy">
+          <span class="plat">Apple Watch · Wear OS</span>
           <h3>Start from your wrist</h3>
-          <p>Pick your supervisor, then start, pause or finish on Apple Watch. Complications show your progress.</p>
+          <p>Pick your supervisor, then start, pause or finish from Apple Watch or a Wear OS watch while your phone is nearby. Complications show your progress; Wear OS adds a tile.</p>
         </div>
         <div class="tile-art">
           <div class="watch" style="--k:1">
@@ -473,6 +539,7 @@
 
       <article class="tile t-share" data-reveal>
         <div class="tile-copy">
+          <span class="plat">iPhone · iPad</span>
           <h3>Invite your supervisor</h3>
           <p>Add their Apple Account email and send them the link. They get a live copy over iCloud, view only or able to add drives. Inviting is optional; a supervisor can also be just a name on your drives.</p>
           <div class="chip-row"><a class="chip" href="#sharing">How sharing works<svg class="i" width="16" height="16"><use href="#i-chevron"/></svg></a></div>
@@ -504,7 +571,7 @@
       <article class="tile t-backup" data-reveal>
         <div class="tile-copy">
           <h3>Your data, your copy</h3>
-          <p>Save a backup with everything, routes included, and restore it on any iPhone or iPad. Import a spreadsheet of drives you logged elsewhere.</p>
+          <p>Save a backup with everything, routes included, and restore it on any iPhone, iPad or Android phone. A backup made on one platform restores on the other. Import a spreadsheet of drives you logged elsewhere.</p>
           <div class="chip-row">
             <span class="chip"><svg class="i" width="16" height="16"><use href="#i-drive"/></svg>Backup and restore</span>
             <span class="chip"><svg class="i" width="16" height="16"><use href="#i-table"/></svg>Import CSV</span>
@@ -519,6 +586,20 @@
         </div>
       </article>
 
+      <article class="tile t-car" data-reveal>
+        <div class="tile-copy">
+          <span class="plat">Android</span>
+          <h3>Starts when you get in the car</h3>
+          <p>Choose your car's Bluetooth once. When your phone connects, the app starts a drive with your usual supervisor, or asks first. When the car disconnects, the drive is finished and saved.</p>
+        </div>
+        <div class="tile-art car-stage">
+          <div class="row-card"><span class="dot bt"><svg class="i" width="18" height="18"><use href="#i-bluetooth"/></svg></span><span><strong>Connected to your car</strong><small>Paired once, in Settings.</small></span></div>
+          <span class="car-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <div class="row-card"><span class="dot ok"><svg class="i" width="18" height="18"><use href="#i-rec"/></svg></span><span><strong>Drive started</strong><small>With Sam · recording</small></span></div>
+          <div class="chip plate"><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Finishes when the car disconnects</div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -526,9 +607,9 @@
 <!-- ============================== SHARING ============================== -->
 <section class="sharing" id="sharing" aria-labelledby="sharing-title">
   <div class="wrap">
-    <p class="eyebrow light" data-reveal>Sharing</p>
+    <p class="eyebrow light" data-reveal>Sharing · iPhone and iPad</p>
     <h2 id="sharing-title" class="display-2" data-reveal>Invite your supervisor. They see every drive, live.</h2>
-    <p class="section-lede" data-reveal>Add their Apple Account email and send them the link. The whole logbook appears on their iPhone or iPad over iCloud and stays in step as drives are saved. Give them view only, or let them add and edit drives.</p>
+    <p class="section-lede" data-reveal>On iPhone and iPad, add their Apple Account email and send them the link. The whole logbook appears on their iPhone or iPad over iCloud and stays in step as drives are saved. Give them view only, or let them add and edit drives. On Android the logbook stays on your phone: hand over a PDF report or a backup instead.</p>
   </div>
   <div class="wrap share-stage" data-reveal>
     <figure class="share-phone">
@@ -566,17 +647,53 @@
   </div>
 </section>
 
+<!-- ============================== PLATFORMS ============================== -->
+<section class="platforms" id="platforms" aria-labelledby="platforms-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>iPhone and Android</p>
+    <h2 id="platforms-title" class="display-2" data-reveal>One logbook app. Two platforms. Here's what differs.</h2>
+    <p class="section-lede" data-reveal>Recording, night hours, goals, routes, reports and backups are the same on both. The things around them use what each phone does best.</p>
+    <div class="plat-card" data-reveal>
+      <table class="plat-table">
+        <thead>
+          <tr><th scope="col">Feature</th><th scope="col">iPhone, iPad and Apple Watch</th><th scope="col">Android and Wear OS</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">One-tap recording, saved every 30 seconds</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td></tr>
+          <tr><th scope="row">Night hours from sunset along the route</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td></tr>
+          <tr><th scope="row">Goals, progress and hours by month</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td></tr>
+          <tr><th scope="row">Routes on the map, with distance</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Apple Maps</span></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Google Maps</span></td></tr>
+          <tr><th scope="row">Driving detection: suggests a start, finishes after you park</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span><small>Motion and Always location</small></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span><small>Physical activity, no background location</small></td></tr>
+          <tr><th scope="row">PDF report, CSV export and import</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span></td></tr>
+          <tr><th scope="row">Backup and restore</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span><small>Restores on Android too</small></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Yes</span><small>Restores on iPhone too</small></td></tr>
+          <tr><th scope="row">Sync between your own devices</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>iCloud</span><small>iPhone and iPad</small></td><td data-label="Android"><span class="no"><b>Not on Android.</b> The logbook stays on the phone; a backup moves it.</span></td></tr>
+          <tr><th scope="row">Share the logbook with a supervisor</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>iCloud sharing</span><small>View only, or can add drives</small></td><td data-label="Android"><span class="no"><b>Not on Android.</b> Send a PDF report or a backup instead.</span></td></tr>
+          <tr><th scope="row">Live timer outside the app</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Live Activity</span><small>Lock Screen and Dynamic Island</small></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Ongoing notification</span><small>A live update on Android 16</small></td></tr>
+          <tr><th scope="row">Start without opening the app</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Siri, Shortcuts, Control Center, widgets</span></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Widget, Quick Settings tile, app shortcuts</span><small>Plus a start from your car's Bluetooth</small></td></tr>
+          <tr><th scope="row">On your wrist</th><td data-label="iPhone"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Apple Watch app</span><small>Complications</small></td><td data-label="Android"><span class="yes"><svg class="i" width="18" height="18"><use href="#i-check"/></svg>Wear OS app</span><small>Tile and complications</small></td></tr>
+          <tr><th scope="row">Needs</th><td data-label="iPhone">iOS 26 or later; iPadOS and watchOS 26</td><td data-label="Android">Android 14 or later; Wear OS watch optional</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine" data-reveal>Want the Android details on their own? See the <a href="android/">learner driver logbook app for Android</a>.</p>
+  </div>
+</section>
+
 <!-- ============================== DEVICES ============================== -->
 <section class="devices" id="devices" aria-labelledby="devices-title">
   <div class="wrap">
     <p class="eyebrow light" data-reveal>Devices</p>
-    <h2 id="devices-title" class="display-2" data-reveal>On iPhone, iPad, Apple Watch and iPhone Duo.</h2>
-    <p class="section-lede" data-reveal>One logbook, everywhere you are. The iPhone records; the watch and iPad follow along.</p>
+    <h2 id="devices-title" class="display-2" data-reveal>On iPhone, iPad, Apple Watch, Android and Wear OS.</h2>
+    <p class="section-lede" data-reveal>One logbook on every device you carry. Your phone records; your watch follows along, and on iPhone so does your iPad. Android phones and tablets, iPhone Duo and dark mode all get layouts of their own.</p>
   </div>
   <div class="rail" id="rail" tabindex="0" aria-label="Screens on each device, scroll sideways">
     <figure class="dev dev-iphone">
       <div class="iphone" style="--k:.62"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="assets/img/iphone-logbook.webp" width="440" height="956" alt="The logbook on iPhone: 62h 50m total, 14h 26m at night, and October's drives" loading="lazy"><div class="island"></div></div></div></div>
       <figcaption>iPhone</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="assets/img/android-logbook.webp" width="412" height="916" alt="The logbook on an Android phone: September's drives, 20 drives and 17h 5m, with a Start drive button" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Android phone</figcaption>
     </figure>
     <figure class="dev dev-ipad">
       <div class="ipad" style="--k:.4"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="cam"></div><div class="screen"><img src="assets/img/ipad-recording.webp" width="1032" height="1376" alt="Recording a drive on iPad" loading="lazy"></div></div></div>
@@ -593,6 +710,10 @@
     <figure class="dev dev-duo-folded">
       <img class="duo" src="assets/img/duo-folded-recording.webp" width="602" height="835" alt="Recording on the outer screen of iPhone Duo" loading="lazy">
       <figcaption>iPhone Duo, folded</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen dark"><img src="assets/img/android-drive-map-dark.webp" width="412" height="916" alt="A drive on Android in dark mode: 45 minutes, all at night, with the route on Google Maps" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Android, dark mode</figcaption>
     </figure>
   </div>
 </section>
@@ -619,6 +740,11 @@
         <h3>50 hours, 10 at night</h3>
         <p>Typical for a teen learner's permit in many US states.</p>
       </article>
+      <article class="goal">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="50"/><circle class="arc total" pathLength="1" cx="60" cy="60" r="50" style="--pct:.67"/></svg>
+        <h3>45 hours of lessons, 22 of practice</h3>
+        <p>The UK sets no minimum. That's what learners who pass have had, on average, according to the DVSA.</p>
+      </article>
     </div>
     <p class="fine" data-reveal>Examples only. Check your licensing authority's current requirements and what records it accepts. The app's report is for your own records and doesn't replace an official logbook or form.</p>
   </div>
@@ -630,27 +756,30 @@
     <p class="eyebrow" data-reveal>Questions</p>
     <h2 id="faq-title" class="display-2" data-reveal>Before you start your first drive.</h2>
     <div class="faq-list" data-reveal data-stagger>
-      <details class="faq-item"><summary>Do I need an account to log my driving hours?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>No. Open the app, type the learner's name and a first supervisor, and start your first drive. The logbook is saved on your iPhone or iPad first. If you're signed in to iCloud it also syncs to your own iCloud account, so it's on your iPad too and you can share it with a supervisor.</p></div></details>
-      <details class="faq-item"><summary>Does the app work without an internet connection?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Recording, the timer, night estimates and the logbook all work offline. iCloud sync and sharing catch up whenever a connection is available.</p></div></details>
+      <details class="faq-item"><summary>Do I need an account to log my driving hours?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>No. Open the app, type the learner's name and a first supervisor, and start your first drive. The logbook is saved on your phone first. On iPhone and iPad, signing in to iCloud also syncs it to your own iCloud account, so it's on your iPad too and you can share it with a supervisor. On Android it stays on the phone, and a backup file goes wherever you keep it.</p></div></details>
+      <details class="faq-item"><summary>Is Driving Hour Tracker on Android?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. The same learner driver logbook app is on Google Play for Android phones and tablets running Android 14 or later, with a Wear OS companion app. Recording, night hours, goals, routes, reports and backups work the same as on iPhone. iCloud sync and logbook sharing are iPhone and iPad features; Android has a home-screen widget, a Quick Settings tile, app shortcuts and an option to start from your car's Bluetooth instead. <a href="android/">See the Android app</a>, or <a href="#platforms">compare the two</a>.</p></div></details>
+      <details class="faq-item"><summary>Does the app work without an internet connection?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Recording, the timer, night estimates and the logbook all work offline. On iPhone, iCloud sync and sharing catch up whenever a connection is available. On Android, the map behind a route needs a connection to load; the route itself is saved either way.</p></div></details>
       <details class="faq-item"><summary>How are night driving hours worked out?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The app uses sunset and sunrise at the places along your recorded route. Time after sunset counts as night and is shown inside the drive's total. You can edit the night minutes on any drive, and a drive with no route is flagged so you can add them.</p></div></details>
       <details class="faq-item"><summary>Will my licensing authority accept the PDF report?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The report lists every drive with its date, times, night hours and supervisor. It is for your records and doesn't replace an official logbook, app or form. Check what your licensing authority accepts before your test.</p></div></details>
       <details class="faq-item"><summary>What happens if the app closes during a drive?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Every drive is written to your device every 30 seconds while recording. If the app closes, the drive is recovered at the next launch, paused at its last saved time, and marked for review so you can check the finish time. If a save ever fails, the recording stays on the device and you can share a recovery file.</p></div></details>
-      <details class="faq-item"><summary>Can a parent or supervisor see the logbook?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Open Sharing from Settings, add their Apple Account email, choose view only or can add drives, and send them the invitation link. The logbook appears under Shared with me on their iPhone or iPad and stays in step over iCloud. They need the app and an iCloud account. Adding a supervisor's name alone doesn't share anything. <a href="#sharing">See how sharing works</a>.</p></div></details>
-      <details class="faq-item"><summary>Does it work on Apple Watch?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your iPhone is nearby. Complications show progress and a Start button.</p></div></details>
-      <details class="faq-item"><summary>Where is my data stored?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>On your device, in the app's own database, and in your own iCloud account when you're signed in to iCloud. If you share a logbook, the people you invite get a copy through iCloud too. There are no accounts with us, no analytics and no ads. See the <a href="privacy/">privacy policy</a>.</p></div></details>
+      <details class="faq-item"><summary>Can a parent or supervisor see the logbook?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>On iPhone and iPad, yes. Open Sharing from Settings, add their Apple Account email, choose view only or can add drives, and send them the invitation link. The logbook appears under Shared with me on their iPhone or iPad and stays in step over iCloud. They need the app and an iCloud account. Adding a supervisor's name alone doesn't share anything. <a href="#sharing">See how sharing works</a>. On Android, sharing isn't available: send them the PDF report, or a backup file to restore in their own copy of the app.</p></div></details>
+      <details class="faq-item"><summary>Can I move my logbook between iPhone and Android?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Save a backup on one phone, open it with the app on the other and choose Restore. A backup made on iPhone restores on Android and the other way round, routes included. iCloud sync and sharing aren't part of a backup.</p></div></details>
+      <details class="faq-item"><summary>Does it work on Apple Watch or Wear OS?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes, both. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your phone is nearby. Apple Watch complications show your progress and a Start button; on Wear OS, a tile and complications do the same.</p></div></details>
+      <details class="faq-item"><summary>Where is my data stored?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>On your device, in the app's own database. On iPhone and iPad it also syncs to your own iCloud account when you're signed in, and the people you share with get a copy through iCloud. On Android it stays on the phone, plus any backup files you save. There are no accounts with us, no analytics and no ads. See the <a href="privacy/">privacy policy</a>.</p></div></details>
     </div>
   </div>
 </section>
 
 <!-- ============================== CTA ============================== -->
-<section class="cta" aria-labelledby="cta-title">
+<section class="cta" id="download" aria-labelledby="cta-title">
   <div class="cta-motif" aria-hidden="true"><svg viewBox="0 0 1024 1024"><use href="#i-ticks"/></svg></div>
   <div class="wrap cta-row">
     <div>
       <h2 id="cta-title" class="display-2" data-reveal>Your first drive is one tap away.</h2>
-      <p class="section-lede" data-reveal>Driving Hour Tracker is on the App Store for iPhone, iPad and Apple Watch.</p>
-      <div class="actions" data-reveal>
-        <a class="btn btn-ink" href="https://apps.apple.com/app/id6819568713"><svg class="i" width="20" height="20"><use href="#i-car"/></svg>Download on the App Store</a>
+      <p class="section-lede" data-reveal>Driving Hour Tracker is on the App Store for iPhone, iPad and Apple Watch, and on Google Play for Android phones, tablets and Wear OS.</p>
+      <div class="stores" data-reveal>
+        <a class="store" href="https://apps.apple.com/app/id6819568713"><img src="assets/badges/app-store.svg" width="150" height="50" alt="Download on the App Store"></a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"><img src="assets/badges/google-play.svg" width="169" height="50" alt="Get it on Google Play"></a>
         <a class="btn btn-ghost-ink" href="support/">Questions? Visit support</a>
       </div>
     </div>
@@ -664,11 +793,12 @@
   <div class="wrap foot-row">
     <a class="brand" href="#top"><img src="assets/icons/app-icon.svg" width="28" height="28" alt="">Driving Hour Tracker</a>
     <nav class="foot-links" aria-label="Footer">
+      <a href="android/">Android</a>
       <a href="privacy/">Privacy</a>
       <a href="support/">Support</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <p class="foot-note">© 2026 KarmaAcademy. Apple, iPhone, iPad, Apple Watch, Siri and iCloud are trademarks of Apple Inc.</p>
+    <p class="foot-note">© 2026 KarmaAcademy. Apple, iPhone, iPad, Apple Watch, Siri and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Google Play, the Google Play logo, Android and Wear OS are trademarks of Google LLC.</p>
   </div>
 </footer>
 
