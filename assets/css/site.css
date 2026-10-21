@@ -97,11 +97,12 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 .nav-cta .short { display: none; }
 @media (max-width: 600px) { .nav-cta .long { display: none; } .nav-cta .short { display: inline; } .nav-row { gap: 12px; } }
 .nav-links { display: none; gap: 4px; margin-left: auto; }
-.nav-links a { text-decoration: none; font-size: 15px; font-weight: 550; color: var(--ink2); padding: 8px 12px; border-radius: 10px; transition: color .2s, background-color .2s; }
+.nav-links a { text-decoration: none; font-size: 15px; font-weight: 550; color: var(--ink2); padding: 8px 12px; border-radius: 10px; transition: color .2s, background-color .2s; white-space: nowrap; }
 .nav-links a:hover { color: var(--ink); background: rgba(17, 19, 23, .06); }
 .nav-cta { margin-left: auto; display: inline-flex; align-items: center; height: 38px; padding: 0 14px; border-radius: 19px; background: var(--plate); color: var(--onPlate); font-size: 14px; font-weight: 650; white-space: nowrap; text-decoration: none; transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out); }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 20px -12px rgba(122, 82, 0, .6); }
 @media (min-width: 900px) { .nav-links { display: flex; } .nav-cta { margin-left: 0; } }
+@media (min-width: 900px) and (max-width: 1100px) { .nav-links a { padding: 8px 8px; font-size: 14px; } .nav-row { gap: 16px; } }
 
 /* ---------- device frames (store.css proportions, scaled by --k) ---------- */
 .iphone { position: relative; width: calc(470px * var(--k, 1)); height: calc(986px * var(--k, 1)); flex: none; }
@@ -576,7 +577,7 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 @media (max-width: 400px) { .store img { height: 44px; } .stores .btn { margin-left: 0; } }
 
 /* the Android phone in the hero, behind the iPhone */
-.hero-android { position: absolute; left: 1%; top: 96px; z-index: 1; --k: .46; opacity: 0; animation: phone-in 1.2s var(--ease-out) .45s forwards; translate: calc(var(--mx) * 14px) calc(var(--my) * 14px); }
+.hero-android { position: absolute; left: 1%; top: 120px; z-index: 1; --k: .46; opacity: 0; animation: phone-in 1.2s var(--ease-out) .45s forwards; translate: calc(var(--mx) * 14px) calc(var(--my) * 14px); }
 @media (min-width: 960px) { .hero-android { left: -4%; top: 150px; --k: .5; } }
 @media (min-width: 1200px) { .hero-android { left: -2%; --k: .54; top: 150px; } }
 @media (max-width: 600px) { .hero-android { --k: .4; left: 0; top: 120px; } }
@@ -625,6 +626,7 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
   .d-shortcuts span, .d-shortcuts span:first-of-type { border-top: 0; padding: 0 12px 0 5px; height: 36px; border-radius: 18px; background: var(--ground); font-size: 14px; gap: 8px; }
   .d-shortcuts .si { width: 26px; height: 26px; border-radius: 13px; }
 }
+@media (min-width: 720px) { .t-android { grid-column: span 2; } }
 @media (min-width: 1080px) {
   .t-android { grid-column: span 8; flex-direction: row; align-items: center; gap: 28px; }
   .t-android .tile-copy { flex: 0 0 250px; } .t-android .tile-art { flex: 1; min-height: 0; }
