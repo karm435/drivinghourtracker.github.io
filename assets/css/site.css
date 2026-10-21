@@ -146,10 +146,10 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 .display .line:nth-child(2) > span { animation-delay: .1s; }
 .display .line:nth-child(3) > span { animation-delay: .2s; }
 @keyframes rise { to { transform: none; } }
-.hero .eyebrow, .hero .lede, .hero .actions, .hero .proof { opacity: 0; animation: fade .9s var(--ease) forwards; }
+.hero .eyebrow, .hero .lede, .hero .actions, .hero .stores, .hero .proof { opacity: 0; animation: fade .9s var(--ease) forwards; }
 .hero .eyebrow { animation-delay: .05s; }
 .hero .lede { animation-delay: .45s; }
-.hero .actions { animation-delay: .6s; }
+.hero .actions, .hero .stores { animation-delay: .6s; }
 .hero .proof { animation-delay: .75s; }
 @keyframes fade { from { opacity: 0; transform: translate3d(0, 14px, 0); } to { opacity: 1; transform: none; } }
 .proof { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink2); font-size: 15px; font-weight: 550; }
@@ -161,9 +161,9 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 @keyframes phone-in { from { opacity: 0; transform: translate3d(0, 60px, 0) scale(.96); } to { opacity: 1; transform: none; } }
 .timer-cover { position: absolute; left: 100px; top: 196px; width: 240px; height: 92px; background: var(--ground); display: grid; place-items: center; font-size: 82px; font-weight: 400; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--ink); line-height: 1; }
 .float { position: absolute; z-index: 3; opacity: 0; animation: fade 1s var(--ease) forwards; translate: calc(var(--mx) * var(--d, 10) * 1px) calc(var(--my) * var(--d, 10) * 1px); }
-.float-a { left: 0; top: 300px; animation-delay: .9s; }
+.float-a { left: 0; top: 28px; animation-delay: .9s; }
 .float-b { right: 0; top: 400px; animation-delay: 1.1s; }
-.float-c { right: 4%; bottom: 0; animation-delay: 1.3s; }
+.float-c { right: 2%; bottom: 0; animation-delay: 1.3s; }
 .float-a .row-card { animation: hover-a 6s ease-in-out infinite; }
 .float-b .row-card { animation: hover-b 7s ease-in-out infinite; }
 .float-c .watch { animation: hover-a 8s ease-in-out infinite; }
@@ -184,13 +184,13 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
   .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 20px; }
   .hero-stage { height: 680px; justify-content: flex-end; padding-right: 20px; }
   .hero-phone { --k: .66; }
-  .float-a { left: -2%; top: 300px; }
+  .float-a { left: -2%; top: 44px; }
   .float-b { right: -24px; top: 420px; }
-  .float-c { left: 6%; bottom: -6px; }
+  .float-c { left: auto; right: 0; bottom: -6px; }
 }
 @media (min-width: 1200px) { .hero-phone { --k: .7; } .hero-stage { height: 720px; } }
 @media (max-width: 600px) {
-  .hero-stage { height: 520px; }
+  .hero-stage { height: 520px; justify-content: flex-end; padding-right: 4px; }
   .hero-phone { --k: .5; }
   .float-a, .float-b { display: none; }
   .float-c { right: -4px; bottom: 0; --k: .55; }
@@ -287,7 +287,7 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 
 /* ============================== FEATURES ============================== */
 .features { padding: clamp(72px, 10vw, 140px) 0; }
-.bento { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 48px; }
+.bento { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 48px; grid-auto-flow: dense; }
 .tile { position: relative; background: var(--card); border-radius: 28px; padding: 28px; box-shadow: var(--shadow-soft); overflow: hidden; display: flex; flex-direction: column; gap: 22px; min-height: 420px; transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out); }
 .tile:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -28px rgba(10, 12, 16, .35), 0 2px 4px rgba(0, 0, 0, .05); }
 .tile-copy h3 { font-size: 24px; letter-spacing: -.025em; line-height: 1.12; }
@@ -426,7 +426,7 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 .dev-watch { padding: 40px 0; }
 .dev .duo { height: 520px; width: auto; filter: drop-shadow(0 34px 40px rgba(0, 0, 0, .5)) drop-shadow(0 10px 14px rgba(0, 0, 0, .3)); }
 .dev-duo-folded .duo { height: 420px; }
-@media (max-width: 720px) { .dev .duo { height: 420px; } .dev-duo-folded .duo { height: 340px; } .dev-iphone .iphone { --k: .5; } .dev-ipad .ipad { --k: .32; } }
+@media (max-width: 720px) { .dev .duo { height: 420px; } .dev-duo-folded .duo { height: 340px; } .dev-iphone .iphone { --k: .5; } .dev-ipad .ipad { --k: .32; } .dev-android .aphone { --k: .52; } }
 
 /* ============================== GOALS ============================== */
 .goals { padding: clamp(72px, 10vw, 140px) 0; }
@@ -440,7 +440,8 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
 .ring .arc.total { stroke: var(--ink); }
 .ring .arc.night { stroke: var(--night); transition-delay: .5s; }
 [data-stagger].in .ring .arc { stroke-dashoffset: calc(1 - var(--pct)); }
-@media (min-width: 820px) { .goal-grid { grid-template-columns: repeat(3, 1fr); } .goal { grid-template-columns: 1fr; justify-items: start; } .goal .ring { grid-row: auto; margin-bottom: 10px; } }
+@media (min-width: 720px) { .goal-grid { grid-template-columns: repeat(2, 1fr); } .goal { grid-template-columns: 1fr; justify-items: start; } .goal .ring { grid-row: auto; margin-bottom: 10px; } }
+@media (min-width: 1080px) { .goal-grid { grid-template-columns: repeat(4, 1fr); } }
 
 /* ============================== FAQ ============================== */
 .faq { padding: clamp(72px, 10vw, 140px) 0; background: var(--card); }
@@ -490,7 +491,7 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; }
   [data-reveal], [data-stagger] > * { opacity: 1; transform: none; }
-  .display .line > span, .hero .eyebrow, .hero .lede, .hero .actions, .hero .proof, .hero-phone, .float { opacity: 1; transform: none; animation: none; }
+  .display .line > span, .hero .eyebrow, .hero .lede, .hero .actions, .hero .stores, .hero .proof, .hero-phone, .hero-android, .float { opacity: 1; transform: none; animation: none; }
   .road-car { left: 60%; animation: none; }
   .drive { height: auto; }
   .drive-stage { position: relative; height: auto; min-height: 0; padding: 56px 0 40px; overflow: visible; }
@@ -553,3 +554,169 @@ a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-s
   .share-steps { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 }
 @media (min-width: 1080px) { .share-stage { gap: 32px; } .share-phone .iphone { --k: .66; } .share-link { margin-top: 240px; } .shared-row { width: 320px; bottom: 92px; } }
+
+
+/* ============================== ANDROID ============================== */
+/* A plain phone outline for the Android captures (412 x 916 pt screen, 1080 x 2400 captures): no brand details. */
+.aphone { position: relative; width: calc(440px * var(--k, 1)); height: calc(944px * var(--k, 1)); flex: none; }
+.aphone > .body { position: absolute; left: 0; top: 0; width: 440px; height: 944px; transform: scale(var(--k, 1)); transform-origin: 0 0; }
+.aphone .edge { position: absolute; inset: 0; border-radius: 58px; background: linear-gradient(150deg, #8A8D93 0%, #3B3E43 18%, #6E7177 52%, #2B2D31 80%, #75787E 100%); box-shadow: 0 50px 90px -30px rgba(10, 12, 16, .55), 0 24px 40px -24px rgba(10, 12, 16, .45); }
+.aphone .bezel { position: absolute; inset: 3px; border-radius: 55px; background: #050506; }
+.aphone .screen { position: absolute; left: 14px; top: 14px; width: 412px; height: 916px; border-radius: 44px; overflow: hidden; background: var(--ground); }
+.aphone .screen > img { position: absolute; left: 0; top: 0; width: 412px; height: 916px; object-fit: cover; }
+.aphone .screen.dark { background: #0F1114; }
+.aphone .hole { position: absolute; left: 50%; top: 13px; width: 13px; height: 13px; margin-left: -6.5px; border-radius: 50%; background: #000; box-shadow: 0 0 0 1.5px rgba(255, 255, 255, .07); z-index: 10; }
+
+/* store badges: Apple's and Google's official artwork, same height, side by side */
+.stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; margin-top: 30px; }
+.store { display: inline-flex; border-radius: 8px; transition: transform .35s var(--ease-out); }
+.store img { height: 50px; width: auto; }
+.store:hover { transform: translateY(-2px); }
+.stores .btn { margin-left: 6px; }
+@media (max-width: 400px) { .store img { height: 44px; } .stores .btn { margin-left: 0; } }
+
+/* the Android phone in the hero, behind the iPhone */
+.hero-android { position: absolute; left: 1%; top: 96px; z-index: 1; --k: .46; opacity: 0; animation: phone-in 1.2s var(--ease-out) .45s forwards; translate: calc(var(--mx) * 14px) calc(var(--my) * 14px); }
+@media (min-width: 960px) { .hero-android { left: -4%; top: 150px; --k: .5; } }
+@media (min-width: 1200px) { .hero-android { left: -2%; --k: .54; top: 150px; } }
+@media (max-width: 600px) { .hero-android { --k: .4; left: 0; top: 120px; } }
+
+/* platform label on a feature tile */
+.plat { display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 9px; border-radius: 7px; background: var(--fill); color: var(--ink2); font-size: 12px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 12px; white-space: nowrap; }
+.features .section-lede { margin-bottom: 0; }
+.features .bento { margin-top: 40px; }
+
+/* Android tile: widget, Quick Settings tile, shortcuts and the notification timer */
+.t-android { grid-column: span 1; }
+.droid-stage { background: var(--ground); border-radius: 24px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: start; min-height: 0; }
+.d-widget, .d-notif, .d-shortcuts { background: var(--card); border-radius: 20px; box-shadow: var(--shadow-soft); color: var(--ink); }
+.d-widget { padding: 16px 18px 18px; }
+.dw-head { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 650; color: var(--ink2); }
+.dw-head img { width: 20px; height: 20px; border-radius: 5px; }
+.dw-big { font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.dw-bar { height: 8px; border-radius: 4px; background: var(--sep); overflow: hidden; margin-top: 10px; }
+.dw-bar i { display: block; height: 100%; width: 0; border-radius: 4px; background: var(--ink); transition: width 1.6s var(--ease-out) .3s; }
+.tile.in .dw-bar i, .dw-bar i { width: var(--w); }
+.dw-cap { font-size: 13px; color: var(--ink2); margin-top: 6px; }
+.dw-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 42px; padding: 0 16px; border-radius: 21px; background: var(--plate); color: var(--onPlate); font-weight: 650; font-size: 15px; margin-top: 14px; width: 100%; }
+.d-tile { display: inline-flex; align-items: center; gap: 12px; height: 72px; padding: 0 18px 0 16px; border-radius: 36px; background: var(--plate); color: var(--onPlate); box-shadow: 0 16px 30px -18px rgba(122, 82, 0, .6); justify-self: start; }
+.d-tile .dt-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(17, 19, 23, .12); }
+.d-tile b { display: block; font-size: 15px; line-height: 1.2; }
+.d-tile small { display: block; font-size: 13px; color: rgba(17, 19, 23, .72); }
+.d-notif { display: flex; gap: 12px; padding: 14px 16px; }
+.d-notif > img { width: 34px; height: 34px; border-radius: 9px; flex: none; }
+.d-notif .dn-body { flex: 1; min-width: 0; }
+.d-notif .dn-top { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+.d-notif .dn-top span { color: var(--dDanger); font-weight: 600; font-size: 12px; display: inline-flex; align-items: center; gap: 4px; color: var(--danger); }
+.d-notif .dn-time { font-size: 26px; font-weight: 600; letter-spacing: .01em; font-variant-numeric: tabular-nums; line-height: 1.15; margin-top: 2px; }
+.d-notif .dn-bar { height: 6px; border-radius: 3px; background: var(--sep); overflow: hidden; margin-top: 8px; }
+.d-notif .dn-bar i { display: block; height: 100%; width: 63%; border-radius: 3px; background: var(--ink); }
+.d-notif .dn-cap { font-size: 12px; color: var(--ink2); margin-top: 5px; }
+.d-shortcuts { padding: 12px 14px 14px; }
+.d-shortcuts small { display: block; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink2); margin-bottom: 8px; }
+.d-shortcuts span { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; padding: 8px 0; border-top: 1px solid var(--sep); }
+.d-shortcuts span:first-of-type { border-top: 0; }
+.d-shortcuts .si { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--accentTint); color: var(--tintInk); flex: none; }
+@media (min-width: 560px) {
+  .droid-stage { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+  .d-widget { grid-row: span 2; }
+  .d-shortcuts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 12px; }
+  .d-shortcuts small { margin: 0 6px 0 2px; }
+  .d-shortcuts span, .d-shortcuts span:first-of-type { border-top: 0; padding: 0 12px 0 5px; height: 36px; border-radius: 18px; background: var(--ground); font-size: 14px; gap: 8px; }
+  .d-shortcuts .si { width: 26px; height: 26px; border-radius: 13px; }
+}
+@media (min-width: 1080px) {
+  .t-android { grid-column: span 8; flex-direction: row; align-items: center; gap: 28px; }
+  .t-android .tile-copy { flex: 0 0 250px; } .t-android .tile-art { flex: 1; min-height: 0; }
+}
+
+/* car tile: Bluetooth start */
+.car-stage { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 300px; }
+.car-stage .row-card { min-width: 0; max-width: 300px; width: 100%; }
+.dot.bt { background: var(--nightTint); color: var(--night); }
+.car-dots { display: flex; flex-direction: column; gap: 6px; }
+.car-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--plate); opacity: .35; animation: share-dot 2.4s ease-in-out infinite; }
+.car-dots i:nth-child(2) { animation-delay: .3s; } .car-dots i:nth-child(3) { animation-delay: .6s; }
+.car-stage .chip.plate { margin-top: 10px; }
+
+/* ============================== PLATFORMS (feature table) ============================== */
+.platforms { padding: clamp(72px, 10vw, 140px) 0; }
+.plat-card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow-soft); overflow: hidden; margin-top: 40px; }
+.plat-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 15px; }
+.plat-table th, .plat-table td { padding: 14px 20px; text-align: left; vertical-align: top; border-top: 1px solid var(--sep); line-height: 1.4; }
+.plat-table thead th { border-top: 0; background: var(--ground); font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--ink2); padding: 16px 20px; }
+.plat-table tbody th { font-weight: 650; width: 32%; }
+.plat-table td { color: var(--ink2); width: 34%; }
+.plat-table .yes { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-weight: 600; }
+.plat-table .yes .i { color: var(--ok); }
+.plat-table .no { color: var(--ink2); }
+.plat-table .no b { font-weight: 650; color: var(--ink); }
+.plat-table td small { display: block; font-size: 13px; color: var(--ink2); margin-top: 2px; }
+.platforms .fine { margin-top: 22px; }
+@media (max-width: 640px) {
+  .plat-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .plat-table, .plat-table tbody, .plat-table tr { display: block; }
+  .plat-table tr { padding: 14px 18px 16px; border-top: 1px solid var(--sep); }
+  .plat-table tr:first-child { border-top: 0; }
+  .plat-table th, .plat-table td { display: block; padding: 0; border: 0; width: auto; }
+  .plat-table tbody th { margin-bottom: 8px; font-size: 16px; }
+  .plat-table td { display: grid; grid-template-columns: 74px 1fr; gap: 10px; margin-top: 6px; font-size: 14px; }
+  .plat-table td::before { content: attr(data-label); font-size: 11px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; color: var(--ink2); padding-top: 3px; }
+}
+
+/* ============================== ANDROID PAGE ============================== */
+.hero-droid-a, .hero-droid-b { position: absolute; z-index: 2; opacity: 0; animation: phone-in 1.2s var(--ease-out) .25s forwards; }
+.hero-droid-a { right: 0; top: 0; --k: .56; }
+.hero-droid-b { left: 0; top: 120px; --k: .46; z-index: 1; animation-delay: .45s; }
+@media (min-width: 960px) { .hero-droid-a { right: 20px; --k: .66; } .hero-droid-b { left: 0; top: 150px; --k: .56; } }
+@media (max-width: 600px) { .hero-droid-a { --k: .5; right: 0; } .hero-droid-b { --k: .4; left: 0; top: 120px; } }
+.hero-note { margin-top: 14px; font-size: 15px; color: var(--ink2); max-width: 54ch; }
+.hero-note a { color: var(--accentInk); font-weight: 600; }
+
+.fcards { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 44px; }
+.fcard { background: var(--dCard); border: 1px solid var(--dSep); border-radius: var(--radius); padding: 24px 24px 26px; }
+.fcard .ico { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--plate); color: var(--onPlate); }
+.fcard h3 { font-size: 20px; letter-spacing: -.02em; margin-top: 16px; line-height: 1.2; }
+.fcard p { color: var(--dInk2); margin-top: 8px; font-size: 15px; }
+.fcards.light .fcard { background: var(--card); border: 0; box-shadow: var(--shadow-soft); }
+.fcards.light .fcard p { color: var(--ink2); }
+@media (min-width: 720px) { .fcards { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (min-width: 1080px) { .fcards { grid-template-columns: repeat(3, 1fr); } }
+.screens { background: var(--dGround); color: var(--dInk); padding: clamp(72px, 10vw, 140px) 0; overflow: hidden; }
+.screens .section-lede { color: var(--dInk2); }
+.screens .rail { align-items: flex-start; padding-top: 56px; }
+.dev-android .aphone { --k: .62; }
+.differs { padding: clamp(72px, 10vw, 140px) 0; background: var(--card); }
+.differs-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
+.differs-grid article { background: var(--ground); border-radius: var(--radius); padding: 24px; }
+.differs-grid h3 { font-size: 19px; letter-spacing: -.02em; line-height: 1.2; }
+.differs-grid p { color: var(--ink2); margin-top: 8px; font-size: 15px; }
+.differs-grid .tag { display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 9px; border-radius: 7px; font-size: 12px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 12px; background: var(--fill); color: var(--ink2); }
+.differs-grid .tag.ok { background: var(--okTint); color: var(--ok); }
+.differs-grid .tag.ios { background: var(--nightTint); color: var(--night); }
+@media (min-width: 720px) { .differs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (min-width: 1080px) { .differs-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* document pages: a jump list and platform badges on headings */
+.doc .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.doc .toc a { display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 18px; background: var(--card); box-shadow: var(--shadow-soft); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; }
+.doc .toc a:hover { color: var(--ink); box-shadow: 0 12px 24px -12px rgba(10, 12, 16, .3); }
+.doc h2 .plat, .doc h3 .plat { vertical-align: middle; margin: 0 0 0 10px; position: relative; top: -2px; }
+.doc .platform-note { background: var(--accentTint); color: var(--tintInk); border-radius: 14px; padding: 12px 16px; margin-top: 16px; font-size: 15px; }
+.doc .platform-note p { margin: 0; color: inherit; }
+
+/* map tile: the iPhone clip and the Android capture side by side from 720px */
+.t-map .tile-art { display: flex; justify-content: center; align-items: flex-start; gap: 20px; }
+.t-map .iphone { position: relative; left: auto; top: 10px; transform: none; --k: .64; }
+.t-map .aphone { --k: .52; margin-top: 70px; display: none; }
+@media (min-width: 720px) { .t-map .aphone { display: block; } }
+@media (min-width: 1080px) {
+  .t-map { flex-direction: column; align-items: stretch; }
+  .t-map .tile-copy { flex: none; } .t-map .tile-art { flex: none; height: 470px; min-height: 0; justify-content: center; gap: 36px; }
+  .t-map .iphone { --k: .62; right: auto; top: 0; } .t-map .aphone { --k: .56; margin-top: 50px; }
+}
+
+/* FAQ on the grey ground (Android page) */
+.faq.on-ground { background: var(--ground); }
+.faq.on-ground .faq-item { background: var(--card); box-shadow: var(--shadow-soft); }
+.differs { background: var(--card); }
