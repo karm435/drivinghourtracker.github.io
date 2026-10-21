@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Driving Hour Tracker: learner driver logbook app for iPhone, iPad and Apple Watch</title>
-<meta name="description" content="Track your learner driving hours on iPhone. One tap records every supervised practice drive, night hours are worked out from sunset, routes go on the map, and a tidy PDF report is ready to share. No account, no ads.">
+<meta name="description" content="Track your learner driving hours on iPhone. One tap records every supervised practice drive, night hours are worked out from sunset, routes go on the map, and your supervisor can follow along on their own iPhone over iCloud. No account, no ads.">
 <link rel="canonical" href="https://drivinghourtracker.karmafy.com.au/">
 <meta name="theme-color" content="#FFC72C">
 <meta name="color-scheme" content="light">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Driving Hour Tracker">
 <meta property="og:title" content="Driving Hour Tracker: the learner driver logbook that never loses a drive">
-<meta property="og:description" content="Time every supervised drive, count night hours automatically and share a tidy report. For iPhone, iPad and Apple Watch. No account, no ads.">
+<meta property="og:description" content="Time every supervised drive, count night hours automatically and share the logbook with your supervisor over iCloud. For iPhone, iPad and Apple Watch. No account, no ads.">
 <meta property="og:url" content="https://drivinghourtracker.karmafy.com.au/">
 <meta property="og:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 <meta property="og:image:alt" content="Track your learner driving hours: three iPhones showing progress, a drive being recorded and the logbook.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Driving Hour Tracker: the learner driver logbook that never loses a drive">
-<meta name="twitter:description" content="Time every supervised drive, count night hours automatically and share a tidy report. No account, no ads.">
+<meta name="twitter:description" content="Time every supervised drive, count night hours automatically and share the logbook with your supervisor. No account, no ads.">
 <meta name="twitter:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
 <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
@@ -68,7 +68,7 @@
         "Siri, Shortcuts and Control Center",
         "Live Activity on the Lock Screen and in the Dynamic Island",
         "Apple Watch app with complications",
-        "Logbook sharing with a supervisor over iCloud",
+        "Logbook sharing with a supervisor over iCloud, by Apple Account email, view only or able to add drives",
         "PDF report, CSV export, backup and restore"
       ]
     },
@@ -81,7 +81,7 @@
         { "@type": "Question", "name": "How are night driving hours worked out?", "acceptedAnswer": { "@type": "Answer", "text": "The app uses sunset and sunrise at the places along your recorded route. Time after sunset counts as night and is shown inside the drive's total. You can edit the night minutes on any drive." } },
         { "@type": "Question", "name": "Will my licensing authority accept the PDF report?", "acceptedAnswer": { "@type": "Answer", "text": "The report lists every drive with its date, times, night hours and supervisor. It is for your records and doesn't replace an official logbook, app or form. Check what your licensing authority accepts before your test." } },
         { "@type": "Question", "name": "What happens if the app closes during a drive?", "acceptedAnswer": { "@type": "Answer", "text": "Every drive is written to your device every 30 seconds while recording. If the app closes, the drive is recovered at the next launch, paused at its last saved time, and marked for review so you can check the finish time." } },
-        { "@type": "Question", "name": "Can a parent or supervisor see the logbook?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Invite them from Settings and they get a live copy of the logbook over iCloud, either view only or able to add drives. They need an iCloud account and the app." } },
+        { "@type": "Question", "name": "Can a parent or supervisor see the logbook?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open Sharing from Settings, add their Apple Account email, choose view only or can add drives, and send them the invitation link. The logbook appears under Shared with me on their iPhone or iPad and stays in step over iCloud. They need the app and an iCloud account." } },
         { "@type": "Question", "name": "Does it work on Apple Watch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your iPhone is nearby. Complications show progress and a Start button." } },
         { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On your device, in the app's own database, and in your own iCloud account when you're signed in to iCloud. If you share a logbook, the people you invite get a copy through iCloud too. There are no accounts with us, no analytics and no ads." } }
       ]
@@ -116,6 +116,7 @@
     <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4.5h11a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2zM5 17.5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="10" r="3"/><path d="M6.3 18.6c1.3-2.2 3.3-3.4 5.7-3.4s4.4 1.2 5.7 3.4"/></g></symbol>
     <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M9 21h6"/></g></symbol>
   </defs>
 </svg>
@@ -129,6 +130,7 @@
     <nav class="nav-links" aria-label="Sections">
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
+      <a href="#sharing">Sharing</a>
       <a href="#devices">Devices</a>
       <a href="#faq">FAQ</a>
       <a href="support/">Support</a>
@@ -154,7 +156,7 @@
         <span class="line"><span>driving hours.</span></span>
         <span class="line"><span>Never lose a <em class="mark">drive</em>.</span></span>
       </h1>
-      <p class="lede">Driving Hour Tracker is a learner driver logbook for iPhone. One tap times each supervised practice drive, night hours are worked out from sunset, every route goes on the map, and a tidy PDF report is always ready.</p>
+      <p class="lede">Driving Hour Tracker is a learner driver logbook for iPhone. One tap times each supervised practice drive, night hours are worked out from sunset, every route goes on the map, and a tidy PDF report is always ready. Invite your supervisor and they see every drive on their own iPhone.</p>
       <div class="actions">
         <a class="btn btn-plate" id="heroCta" href="https://apps.apple.com/app/id6819568713"><svg class="i" width="20" height="20"><use href="#i-car"/></svg>Download on the App Store</a>
         <a class="btn btn-ghost" href="#how">See a drive, start to finish</a>
@@ -472,13 +474,14 @@
       <article class="tile t-share" data-reveal>
         <div class="tile-copy">
           <h3>Invite your supervisor</h3>
-          <p>They get a live copy over iCloud, view only or able to add drives. Inviting is optional; a supervisor can also be just a name on your drives.</p>
+          <p>Add their Apple Account email and send them the link. They get a live copy over iCloud, view only or able to add drives. Inviting is optional; a supervisor can also be just a name on your drives.</p>
+          <div class="chip-row"><a class="chip" href="#sharing">How sharing works<svg class="i" width="16" height="16"><use href="#i-chevron"/></svg></a></div>
         </div>
         <div class="tile-art">
           <div class="people" data-stagger>
             <div class="person"><span class="avatar plate">M</span><span><b>Maya</b><small>You · Owner</small></span></div>
-            <div class="person"><span class="avatar">S</span><span><b>Sam</b><small><svg class="i" width="14" height="14"><use href="#i-lock"/></svg>View only</small></span></div>
-            <div class="person"><span class="avatar">J</span><span><b>Jordan</b><small>Can add and edit drives</small></span></div>
+            <div class="person"><span class="avatar">S</span><span><b>Sam</b><small>Can add and edit drives</small></span></div>
+            <div class="person"><span class="avatar">J</span><span><b>Jordan</b><small><svg class="i" width="14" height="14"><use href="#i-lock"/></svg>View only</small></span></div>
             <div class="person cloud"><span class="avatar icloud"><svg class="i" width="22" height="22"><use href="#i-cloud"/></svg></span><span><b>iCloud</b><small class="ok"><svg class="i" width="13" height="13"><use href="#i-check"/></svg>Signed in. Changes sync automatically.</small></span></div>
           </div>
         </div>
@@ -517,6 +520,49 @@
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- ============================== SHARING ============================== -->
+<section class="sharing" id="sharing" aria-labelledby="sharing-title">
+  <div class="wrap">
+    <p class="eyebrow light" data-reveal>Sharing</p>
+    <h2 id="sharing-title" class="display-2" data-reveal>Invite your supervisor. They see every drive, live.</h2>
+    <p class="section-lede" data-reveal>Add their Apple Account email and send them the link. The whole logbook appears on their iPhone or iPad over iCloud and stays in step as drives are saved. Give them view only, or let them add and edit drives.</p>
+  </div>
+  <div class="wrap share-stage" data-reveal>
+    <figure class="share-phone">
+      <div class="iphone">
+        <div class="body"><div class="edge"></div><div class="bezel"></div>
+          <div class="screen dark"><img src="assets/img/iphone-sharing-owner.webp" width="440" height="956" alt="The learner's Sharing screen: Maya's logbook, You as owner, Sam who can add and edit drives, and an Invite someone card asking for an Apple Account email" loading="lazy"><div class="island"></div></div>
+        </div>
+      </div>
+      <figcaption><b>The learner's iPhone</b><span>Invite by Apple Account email. View only, or can add drives.</span></figcaption>
+    </figure>
+    <div class="share-link" aria-hidden="true">
+      <span class="share-dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="share-pill"><svg class="i" width="22" height="22"><use href="#i-cloud"/></svg>Live over iCloud</span>
+      <span class="share-dots"><i></i><i></i><i></i><i></i><i></i></span>
+    </div>
+    <figure class="share-phone">
+      <div class="iphone">
+        <div class="body"><div class="edge"></div><div class="bezel"></div>
+          <div class="screen dark"><img src="assets/img/iphone-sharing-supervisor.webp" width="440" height="956" alt="The supervisor's Sharing screen: Maya shared this logbook with you, Maya as owner, Sam as you with edit access, Participants and Leave this logbook" loading="lazy"><div class="island"></div></div>
+        </div>
+      </div>
+      <div class="shared-row" aria-hidden="true">
+        <small>Shared with me</small>
+        <div class="row"><span class="avatar">M</span><span class="t"><b>Maya’s logbook</b><em><svg class="i" width="14" height="14"><use href="#i-person"/></svg>Shared by Maya</em></span><svg class="i tick" width="20" height="20"><use href="#i-check"/></svg></div>
+      </div>
+      <figcaption><b>The supervisor's iPhone</b><span>The same logbook under Shared with me, every drive as it's saved.</span></figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <ol class="share-steps" data-reveal data-stagger>
+      <li><span class="num">1</span><h3>Add their email</h3><p>Open Sharing from Settings and type the Apple Account email they sign in to iCloud with. Choose view only or can add drives.</p></li>
+      <li><span class="num">2</span><h3>Send the link</h3><p>The invitation link opens only for the people you added. They need the app and iCloud, nothing else: there's still no account with us.</p></li>
+      <li><span class="num">3</span><h3>They follow along</h3><p>The logbook shows up under Shared with me on their device, routes and night hours included. They can leave any time, and you keep the logbook.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -589,7 +635,7 @@
       <details class="faq-item"><summary>How are night driving hours worked out?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The app uses sunset and sunrise at the places along your recorded route. Time after sunset counts as night and is shown inside the drive's total. You can edit the night minutes on any drive, and a drive with no route is flagged so you can add them.</p></div></details>
       <details class="faq-item"><summary>Will my licensing authority accept the PDF report?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The report lists every drive with its date, times, night hours and supervisor. It is for your records and doesn't replace an official logbook, app or form. Check what your licensing authority accepts before your test.</p></div></details>
       <details class="faq-item"><summary>What happens if the app closes during a drive?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Every drive is written to your device every 30 seconds while recording. If the app closes, the drive is recovered at the next launch, paused at its last saved time, and marked for review so you can check the finish time. If a save ever fails, the recording stays on the device and you can share a recovery file.</p></div></details>
-      <details class="faq-item"><summary>Can a parent or supervisor see the logbook?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Invite them from Settings and they get a live copy of the logbook over iCloud, either view only or able to add drives. They need an iCloud account and the app. Adding a supervisor's name alone doesn't share anything.</p></div></details>
+      <details class="faq-item"><summary>Can a parent or supervisor see the logbook?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Open Sharing from Settings, add their Apple Account email, choose view only or can add drives, and send them the invitation link. The logbook appears under Shared with me on their iPhone or iPad and stays in step over iCloud. They need the app and an iCloud account. Adding a supervisor's name alone doesn't share anything. <a href="#sharing">See how sharing works</a>.</p></div></details>
       <details class="faq-item"><summary>Does it work on Apple Watch?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. The watch app shows your hours, lets you pick a supervisor, and starts, pauses and finishes drives while your iPhone is nearby. Complications show progress and a Start button.</p></div></details>
       <details class="faq-item"><summary>Where is my data stored?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>On your device, in the app's own database, and in your own iCloud account when you're signed in to iCloud. If you share a logbook, the people you invite get a copy through iCloud too. There are no accounts with us, no analytics and no ads. See the <a href="privacy/">privacy policy</a>.</p></div></details>
     </div>

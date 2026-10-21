@@ -69,6 +69,7 @@ svg.i { display: inline-block; vertical-align: middle; flex: none; }
 .chip b { font-weight: 700; }
 .chip.plate { background: var(--plate); color: var(--onPlate); box-shadow: 0 16px 30px -18px rgba(10, 12, 16, .5); }
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+a.chip { text-decoration: none; transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out); } a.chip:hover { transform: translateY(-1px); box-shadow: 0 12px 24px -12px rgba(10, 12, 16, .3); }
 
 .row-card { display: flex; align-items: center; gap: 14px; background: var(--card); border-radius: 18px; padding: 14px 18px 14px 14px; box-shadow: var(--shadow); min-width: 250px; max-width: 330px; }
 .row-card strong { display: block; font-size: 16px; line-height: 1.25; }
@@ -509,4 +510,46 @@ svg.i { display: inline-block; vertical-align: middle; flex: none; }
   .ring .arc { stroke-dashoffset: calc(1 - var(--pct)); }
   .horizon .h-sun { transform: translateY(80px); } .horizon::after { opacity: .92; } .horizon .h-moon { opacity: 1; transform: none; }
   #watchScreen img:nth-child(2) { opacity: 1; }
+  .shared-row { opacity: 1; translate: none; }
+  .share-dots i { animation: none; opacity: .6; }
 }
+
+/* ============================== SHARING ============================== */
+/* Two real Dark Mode captures: the learner inviting Sam, and Sam's copy of Maya's logbook. */
+.sharing { background: var(--dGround); color: var(--dInk); padding: clamp(72px, 10vw, 140px) 0; overflow: hidden; }
+.sharing .section-lede { color: var(--dInk2); }
+.iphone .screen.dark { background: #080A0B; }
+.share-stage { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; justify-items: center; margin-top: 48px; }
+.share-phone { position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px; max-width: 100%; }
+.share-phone .iphone { --k: .6; }
+.share-phone figcaption { text-align: center; font-size: 14px; color: var(--dInk2); max-width: 30ch; }
+.share-phone figcaption b { display: block; color: var(--dInk); font-size: 15px; margin-bottom: 4px; }
+.share-link { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.share-pill { display: inline-flex; align-items: center; gap: 9px; height: 44px; padding: 0 18px; border-radius: 22px; background: var(--plate); color: var(--onPlate); font-weight: 650; font-size: 15px; white-space: nowrap; box-shadow: 0 20px 36px -20px rgba(255, 199, 44, .55); }
+.share-dots { display: flex; gap: 8px; }
+.share-dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--plate); opacity: .25; animation: share-dot 2.4s ease-in-out infinite; }
+.share-dots i:nth-child(2) { animation-delay: .25s; } .share-dots i:nth-child(3) { animation-delay: .5s; } .share-dots i:nth-child(4) { animation-delay: .75s; } .share-dots i:nth-child(5) { animation-delay: 1s; }
+.share-dots:last-child i:nth-child(1) { animation-delay: 1.25s; } .share-dots:last-child i:nth-child(2) { animation-delay: 1.5s; } .share-dots:last-child i:nth-child(3) { animation-delay: 1.75s; } .share-dots:last-child i:nth-child(4) { animation-delay: 2s; } .share-dots:last-child i:nth-child(5) { animation-delay: 2.25s; }
+@keyframes share-dot { 0%, 100% { opacity: .25; transform: scale(1); } 20% { opacity: 1; transform: scale(1.25); } }
+.shared-row { position: absolute; left: 50%; bottom: 92px; transform: translateX(-50%); width: min(320px, 88vw); background: #0F1014; border-radius: 20px; padding: 12px 14px 12px; box-shadow: 0 30px 60px -18px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06); color: var(--dInk); opacity: 0; translate: 0 14px; transition: opacity .8s var(--ease) .5s, translate .8s var(--ease) .5s; }
+[data-reveal].in .shared-row { opacity: 1; translate: 0 0; }
+.shared-row small { display: block; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--dInk2); margin: 0 0 8px 6px; }
+.shared-row .row { display: flex; align-items: center; gap: 12px; background: #1C1D21; border-radius: 14px; padding: 12px 14px; }
+.shared-row .avatar { width: 32px; height: 32px; font-size: 13px; background: #23272C; color: var(--dInk2); }
+.shared-row .t b { display: block; font-size: 15px; line-height: 1.25; }
+.shared-row .t em { display: inline-flex; align-items: center; gap: 5px; font-style: normal; font-size: 13px; color: var(--dInk2); }
+.shared-row .tick { margin-left: auto; color: var(--dInk); }
+.share-steps { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: 1fr; gap: 16px; }
+.share-steps li { background: var(--dCard); border: 1px solid var(--dSep); border-radius: var(--radius); padding: 24px 24px 26px; }
+.share-steps .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--plate); color: var(--onPlate); font-weight: 800; font-size: 16px; }
+.share-steps h3 { font-size: 20px; letter-spacing: -.02em; margin-top: 14px; line-height: 1.2; }
+.share-steps p { color: var(--dInk2); margin-top: 8px; font-size: 15px; }
+@media (min-width: 720px) {
+  .share-stage { grid-template-columns: 1fr auto 1fr; gap: 24px; }
+  .share-link { flex-direction: column; align-self: center; margin-top: 180px; }
+  .share-dots { flex-direction: column; }
+  .share-phone .iphone { --k: .5; }
+  .shared-row { width: min(280px, 88vw); bottom: 84px; }
+  .share-steps { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
+@media (min-width: 1080px) { .share-stage { gap: 32px; } .share-phone .iphone { --k: .66; } .share-link { margin-top: 240px; } .shared-row { width: 320px; bottom: 92px; } }

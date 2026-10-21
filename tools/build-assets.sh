@@ -29,6 +29,9 @@ phone "$raw/iphone-data-tools.png"          iphone-data-tools
 phone "$raw/v2/iphone-lockscreen-live.png"  iphone-lockscreen-live
 phone "$raw/v2/iphone-lockscreen-clean.png" iphone-lockscreen-clean
 phone "$raw/v2/iphone-home-live.png"        iphone-home-live
+# The sharing screens are real device captures, patched by Design/Store Assets/Tools/sharing_captures.py
+phone "$raw/v2/iphone-sharing-owner.png"      iphone-sharing-owner
+phone "$raw/v2/iphone-sharing-supervisor.png" iphone-sharing-supervisor
 
 # iPad captures (2064 x 2752)
 pad "$raw/v2/ipad-recording.png" ipad-recording
