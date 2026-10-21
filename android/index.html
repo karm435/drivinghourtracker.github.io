@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Learner driver logbook app for Android · Driving Hour Tracker</title>
+<meta name="description" content="Driving Hour Tracker for Android is a learner driver logbook app: log supervised driving hours with one tap, count night hours from sunset, see every route on Google Maps and export a PDF report. Widget, Quick Settings tile and Wear OS. No account, no ads.">
+<link rel="canonical" href="https://drivinghourtracker.karmafy.com.au/android/">
+<meta name="theme-color" content="#FFC72C">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Driving Hour Tracker">
+<meta property="og:title" content="Driving Hour Tracker for Android: the learner driver logbook app">
+<meta property="og:description" content="Log supervised driving hours with one tap, count night hours from sunset and see every route on Google Maps. For Android phones, tablets and Wear OS. No account, no ads.">
+<meta property="og:url" content="https://drivinghourtracker.karmafy.com.au/android/">
+<meta property="og:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="Track your learner driving hours: three phones showing progress, a drive being recorded and the logbook.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Driving Hour Tracker for Android: the learner driver logbook app">
+<meta name="twitter:description" content="Log supervised driving hours with one tap, count night hours from sunset and see every route on Google Maps. No account, no ads.">
+<meta name="twitter:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
+<link rel="icon" href="../assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="../assets/img/android-logbook.webp">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://drivinghourtracker.karmafy.com.au/android/#page",
+      "url": "https://drivinghourtracker.karmafy.com.au/android/",
+      "name": "Learner driver logbook app for Android",
+      "description": "Driving Hour Tracker for Android logs supervised driving hours with one tap, works out night hours from sunset, maps routes on Google Maps and exports a PDF report. Available on Google Play for Android 14 and later, with a Wear OS companion app.",
+      "isPartOf": { "@id": "https://drivinghourtracker.karmafy.com.au/#website" },
+      "about": { "@id": "https://drivinghourtracker.karmafy.com.au/#app" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Driving Hour Tracker", "item": "https://drivinghourtracker.karmafy.com.au/" },
+        { "@type": "ListItem", "position": 2, "name": "Android", "item": "https://drivinghourtracker.karmafy.com.au/android/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://drivinghourtracker.karmafy.com.au/android/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Which Android phones does Driving Hour Tracker support?", "acceptedAnswer": { "@type": "Answer", "text": "Any phone or tablet running Android 14 or later. Tablets and unfolded foldables show the logbook and the open drive side by side. A Wear OS watch paired to the phone can run the companion app." } },
+        { "@type": "Question", "name": "Does the Android app sync or share the logbook like the iPhone app?", "acceptedAnswer": { "@type": "Answer", "text": "No. On Android the logbook stays on the phone: there is no iCloud sync, no sharing and no invitations. To keep a copy or move it, save a backup file; to show a supervisor your hours, give them the PDF report or a backup to restore in their own app." } },
+        { "@type": "Question", "name": "Can I move my logbook from iPhone to Android?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On the iPhone, open Settings, Export and backup, and save a backup. Open that file with Driving Hour Tracker on the Android phone and choose Restore. Everything comes across, routes included, and a backup made on Android restores on iPhone the same way." } },
+        { "@type": "Question", "name": "What permissions does the Android app ask for?", "acceptedAnswer": { "@type": "Answer", "text": "Location, while a drive is recording, for the route and night hours; Physical activity, if you turn on driving suggestions, to notice when you drive and when you stop; Notifications, so the live timer can show while you record; and Nearby devices, only if you set up Start from car Bluetooth. None are needed to time a drive by hand." } },
+        { "@type": "Question", "name": "Why doesn't the timer show in my notifications while recording?", "acceptedAnswer": { "@type": "Answer", "text": "The Notifications permission was declined. Recording still works and the drive is still saved every 30 seconds, but Android hides the timer. Allow notifications for Driving Hour Tracker in Android's app settings and it appears on the next drive." } },
+        { "@type": "Question", "name": "How does starting a drive from my car work?", "acceptedAnswer": { "@type": "Answer", "text": "In Settings, open Start from car Bluetooth and choose your car once from the list Android shows. From then on, when your phone connects to the car the app either starts a drive with your usual supervisor or shows a notification asking first, whichever you chose, and finishes the drive when the car disconnects. A drive the car starts records time only until you open the app; choose Ask me first to get the route as well." } },
+        { "@type": "Question", "name": "Does the Wear OS app work without the phone?", "acceptedAnswer": { "@type": "Answer", "text": "No. The phone does the recording; the watch shows your hours and sends start, pause and finish to it. Keep the phone nearby and connected. If the watch can't reach the phone it says so, and the command isn't queued." } },
+        { "@type": "Question", "name": "Does the Android app work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Recording, the timer, night estimates, the logbook, reports and backups all work offline. Only the Google Maps picture behind a route needs a connection to load; the route itself is saved either way." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-car" viewBox="12 36 68 54"><path fill="currentColor" fill-rule="evenodd" d="M22 56 H26.65 L32 43 Q33 40 36 40 H58 Q61 40 62 43 L67.35 56 H70 A8 8 0 0 1 78 64 V76 A4 4 0 0 1 74 80 H73 V85 A3 3 0 0 1 70 88 H63 A3 3 0 0 1 60 85 V80 H32 V85 A3 3 0 0 1 29 88 H22 A3 3 0 0 1 19 85 V80 H18 A4 4 0 0 1 14 76 V64 A8 8 0 0 1 22 56 Z M31 54 L36 46 H58 L63 54 Z M20 68 A5 5 0 1 0 30 68 A5 5 0 1 0 20 68 Z M62 68 A5 5 0 1 0 72 68 A5 5 0 1 0 62 68 Z M40 66 H52 A2 2 0 0 1 52 70 H40 A2 2 0 0 1 40 66 Z"/></symbol>
+    <symbol id="i-ticks" viewBox="0 0 1024 1024"><g stroke="currentColor" fill="none"><line x1="512" y1="162" x2="512" y2="100" stroke-width="28"/><line x1="694" y1="196.8" x2="718" y2="155.2" stroke-width="18"/><line x1="827.2" y1="330" x2="868.8" y2="306" stroke-width="18"/><line x1="862" y1="512" x2="924" y2="512" stroke-width="28"/><line x1="827.2" y1="694" x2="868.8" y2="718" stroke-width="18"/><line x1="694" y1="827.2" x2="718" y2="868.8" stroke-width="18"/><line x1="512" y1="862" x2="512" y2="924" stroke-width="28"/><line x1="330" y1="827.2" x2="306" y2="868.8" stroke-width="18"/><line x1="196.8" y1="694" x2="155.2" y2="718" stroke-width="18"/><line x1="162" y1="512" x2="100" y2="512" stroke-width="28"/><line x1="196.8" y1="330" x2="155.2" y2="306" stroke-width="18"/><line x1="330" y1="196.8" x2="306" y2="155.2" stroke-width="18"/><circle cx="512" cy="512" r="300" stroke-width="62" opacity=".5"/></g></symbol>
+    <symbol id="i-rec" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2a10 10 0 1 1 0 20a10 10 0 1 1 0-20Zm0 5.2a4.8 4.8 0 1 0 0 9.6a4.8 4.8 0 1 0 0-9.6Z"/><circle cx="12" cy="12" r="3.3" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M14.5 2.5a9.5 9.5 0 1 0 7 15.6 8.3 8.3 0 0 1-7-15.6Z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></g></symbol>
+    <symbol id="i-drive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="6" width="17" height="12" rx="2.5"/><circle cx="16.5" cy="12" r="1.3" fill="currentColor" stroke="none"/><path d="M3.5 12h17"/></g></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 21V4h11l-2 4 2 4H6"/></symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="6" y="6.5" width="12" height="11" rx="3"/><path d="M9 6.5 9.6 3h4.8L15 6.5M9 17.5l.6 3.5h4.8l.6-3.5"/></g></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="10" r="3"/><path d="M6.3 18.6c1.3-2.2 3.3-3.4 5.7-3.4s4.4 1.2 5.7 3.4"/></g></symbol>
+    <symbol id="i-bluetooth" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6.5 7.5 17.5 16.5 12 21.5V2.5l5.5 5-11 9"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></g></symbol>
+    <symbol id="i-toggle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="2.6" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21.5s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11Z"/><circle cx="12" cy="10.5" r="2.4"/></g></symbol>
+    <symbol id="i-walk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="4" r="1.8"/><path d="M9.5 21.5 11 15l-2-1.5V9.5l4-1.5 2.5 3.5 3 1M9 13.5l-3 2.5M13 15l3 2.5 1 4"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="../" aria-label="Driving Hour Tracker, home">
+      <img src="../assets/icons/app-icon.svg" width="36" height="36" alt="">
+      <span>Driving Hour Tracker</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="../#features">Features</a>
+      <a href="./" aria-current="page">Android</a>
+      <a href="#faq">FAQ</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../support/">Support</a>
+    </nav>
+    <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"><span class="long">Get it on Google Play</span><span class="short" aria-hidden="true">Google Play</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="motif"><svg viewBox="0 0 1024 1024"><use href="#i-ticks"/></svg></div>
+    <div class="glow"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="lplate" aria-hidden="true">L</span>Driving Hour Tracker for Android</p>
+      <h1 id="hero-title" class="display">
+        <span class="line"><span>The learner driver</span></span>
+        <span class="line"><span>logbook app</span></span>
+        <span class="line"><span>for <em class="mark">Android</em>.</span></span>
+      </h1>
+      <p class="lede">Log your supervised driving hours on any Android phone or tablet. One tap records each practice drive, night hours are worked out from sunset along your route, every drive goes on Google Maps, and a tidy PDF logbook report is always ready. No account, no ads, and the logbook stays on your phone.</p>
+      <div class="stores">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"><img src="../assets/badges/google-play.svg" width="169" height="50" alt="Get it on Google Play"></a>
+        <a class="btn btn-ghost" href="#android-features">What's built for Android</a>
+      </div>
+      <p class="hero-note">On iPhone? <a href="../">See the app for iPhone, iPad and Apple Watch</a>.</p>
+      <ul class="proof" aria-label="Highlights">
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>No account</li>
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>No ads</li>
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Saves every 30 seconds</li>
+        <li><svg class="i" width="16" height="16"><use href="#i-check"/></svg>Android 14 or later</li>
+      </ul>
+    </div>
+
+    <div class="hero-stage" id="heroStage" aria-hidden="true">
+      <div class="aphone hero-droid-b" data-depth="14">
+        <div class="body"><div class="edge"></div><div class="bezel"></div>
+          <div class="screen"><img src="../assets/img/android-drive-map.webp" width="412" height="916" alt=""><div class="hole"></div></div>
+        </div>
+      </div>
+      <div class="aphone hero-droid-a" data-depth="8">
+        <div class="body"><div class="edge"></div><div class="bezel"></div>
+          <div class="screen"><img src="../assets/img/android-logbook.webp" width="412" height="916" alt="" fetchpriority="high"><div class="hole"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="road" aria-hidden="true">
+    <div class="lane"></div>
+    <div class="road-car"><svg viewBox="12 36 68 54"><use href="#i-car"/></svg></div>
+  </div>
+</section>
+
+<!-- ============================== SCREENS ============================== -->
+<section class="screens" id="screens" aria-labelledby="screens-title">
+  <div class="wrap">
+    <p class="eyebrow light" data-reveal>The app</p>
+    <h2 id="screens-title" class="display-2" data-reveal>A driving log app for learner drivers, made for Android.</h2>
+    <p class="section-lede" data-reveal>Material 3, the L-plate look, a Start drive button that's never more than a tap away, and dark mode. Captured on a phone; tablets and unfolded foldables show the logbook and the open drive side by side.</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Screens of the Android app, scroll sideways">
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="../assets/img/android-logbook.webp" width="412" height="916" alt="The logbook on Android: September's drives, 20 drives and 17h 5m, each marked day or night, with a Start drive button" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Logbook</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="../assets/img/android-progress.webp" width="412" height="916" alt="Progress on Android: 62h 50m of a 100h goal, 14h 26m of 20 night hours, and a chart of hours by month" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Progress and goals</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="../assets/img/android-drive-map.webp" width="412" height="916" alt="A drive on Android: 45 minutes at night, estimated from the route, which is drawn on Google Maps" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Route on Google Maps</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="../assets/img/android-recording.webp" width="412" height="916" alt="Recording a drive on Android: the timer, the supervising driver, and Saved on this device every 30 seconds" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Recording</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen"><img src="../assets/img/android-start-sheet.webp" width="412" height="916" alt="Start a drive on Android: pick who's supervising, choose whether to record your route, and start" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Start a drive</figcaption>
+    </figure>
+    <figure class="dev dev-android">
+      <div class="aphone"><div class="body"><div class="edge"></div><div class="bezel"></div><div class="screen dark"><img src="../assets/img/android-drive-map-dark.webp" width="412" height="916" alt="The same drive in dark mode, with the route on Google Maps" loading="lazy"><div class="hole"></div></div></div></div>
+      <figcaption>Dark mode</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================== LOGBOOK FEATURES ============================== -->
+<section class="goals" id="logbook" aria-labelledby="logbook-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The logbook</p>
+    <h2 id="logbook-title" class="display-2" data-reveal>A driving hours tracker that does the counting for you.</h2>
+    <p class="section-lede" data-reveal>Everything the iPhone app does with a drive, the Android app does the same way. Same rules, same reports, same backup file.</p>
+    <div class="fcards light" data-reveal data-stagger>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-rec"/></svg></span>
+        <h3>One tap to log a drive</h3>
+        <p>Pick who's supervising and start. The timer, the route and the supervisor are saved together, and the drive is written to your phone every 30 seconds. If the app closes, the drive is recovered at the next launch.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-moon"/></svg></span>
+        <h3>Night hours, worked out</h3>
+        <p>Sunset and sunrise along your recorded route split every drive into day and night. Night is always shown inside the total, never on top of it, and you can edit the minutes on any drive.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-map"/></svg></span>
+        <h3>Every route on Google Maps</h3>
+        <p>See where each drive went, with the distance on every one. Routes stay in your logbook and are left out of reports. Record time only whenever you'd rather not share your location.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-flag"/></svg></span>
+        <h3>Your goals, your count-down</h3>
+        <p>Set the total and night hours you're aiming for: a 120 hours logbook for New South Wales or Victoria, 100 for Queensland, a 50-hour permit log for a US state, or your own number. The front page shows what's left.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-doc"/></svg></span>
+        <h3>A tidy PDF report, and CSV</h3>
+        <p>Every drive with its date, times, night hours and supervisor, as a PDF for your records or a spreadsheet. Import a spreadsheet of drives you logged somewhere else.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-drive"/></svg></span>
+        <h3>Backup that moves with you</h3>
+        <p>Save a backup with everything, routes included, and restore it on any Android phone or tablet. A backup made on iPhone restores on Android, and the other way round.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BUILT FOR ANDROID ============================== -->
+<section class="why" id="android-features" aria-labelledby="android-title">
+  <div class="wrap">
+    <p class="eyebrow light" data-reveal>Built for Android</p>
+    <h2 id="android-title" class="display-2" data-reveal>Start a drive from the home screen, the shade, your car or your wrist.</h2>
+    <p class="section-lede" data-reveal>The iPhone app has Siri, Control Center and a Live Activity. The Android app has the Android ways of doing the same things.</p>
+    <div class="fcards" data-reveal data-stagger>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-grid"/></svg></span>
+        <h3>Home-screen widget</h3>
+        <p>Your total and night hours against your goals, your last drive, and a Start drive button. While you record it shows the live timer and opens the current drive.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-toggle"/></svg></span>
+        <h3>Quick Settings tile</h3>
+        <p>Add Practice drive to the notification shade. One tap starts a drive with your usual supervisor; while recording, one tap finishes it.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-bell"/></svg></span>
+        <h3>The timer in your notifications</h3>
+        <p>While a drive is recording, an ongoing notification shows the timer and your progress, with Pause and Finish right there. On Android 16 it's a live update.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-plus"/></svg></span>
+        <h3>App shortcuts</h3>
+        <p>Press and hold the app icon to start practice, log a past drive, open your progress, or start with a particular supervisor.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-bluetooth"/></svg></span>
+        <h3>Start from your car's Bluetooth</h3>
+        <p>Choose your car once. When your phone connects, the app starts a drive or asks you first, and finishes it when the car disconnects. No background location needed.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-watch"/></svg></span>
+        <h3>Wear OS companion</h3>
+        <p>Your hours and recent drives on your watch, a supervisor picker, and start, pause and finish while the phone is nearby. A tile and complications for your progress, night hours and a Start button.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PERMISSIONS ============================== -->
+<section class="platforms" id="permissions" aria-labelledby="permissions-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Permissions, plainly</p>
+    <h2 id="permissions-title" class="display-2" data-reveal>What the Android app asks for, and why.</h2>
+    <p class="section-lede" data-reveal>Nothing is needed to time a drive by hand. Each permission is asked for when you first use the feature that needs it, and each can be turned off again in Android's app settings.</p>
+    <div class="fcards light" data-reveal data-stagger>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-pin"/></svg></span>
+        <h3>Location</h3>
+        <p>Only while a drive is recording, to draw the route and work out night hours. The app never asks for "Allow all the time" and uses no location between drives.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-walk"/></svg></span>
+        <h3>Physical activity</h3>
+        <p>If you turn on driving suggestions: to notice when you're in a vehicle and when the driving stops, so the app can suggest a drive and offer to finish one. Nothing is stored.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-bell"/></svg></span>
+        <h3>Notifications</h3>
+        <p>So the live timer can show while you record, and so a driving suggestion or a car start can ask you first. Without it recording still works; the timer just stays hidden.</p>
+      </article>
+      <article class="fcard">
+        <span class="ico"><svg class="i" width="22" height="22"><use href="#i-bluetooth"/></svg></span>
+        <h3>Nearby devices</h3>
+        <p>Only if you set up Start from car Bluetooth, so Android can tell the app when the car you chose connects and disconnects. The app doesn't scan for anything else.</p>
+      </article>
+    </div>
+    <p class="fine" data-reveal>Read the <a href="../privacy/">privacy policy</a> for the detail. There are no accounts, no analytics and no ads on either platform.</p>
+  </div>
+</section>
+
+<!-- ============================== DIFFERENCES ============================== -->
+<section class="differs" id="differs" aria-labelledby="differs-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Android and iPhone</p>
+    <h2 id="differs-title" class="display-2" data-reveal>The same logbook. A few honest differences.</h2>
+    <p class="section-lede" data-reveal>The Android app is a full port of the iPhone app, with the same rules and the same backup file. Three things are iPhone-only, and the Android app has its own extras in their place.</p>
+    <div class="differs-grid" data-reveal data-stagger>
+      <article>
+        <span class="tag ios">iPhone and iPad only</span>
+        <h3>iCloud sync</h3>
+        <p>On Android the logbook lives on one phone. Save a backup to keep a copy or move it to another device.</p>
+      </article>
+      <article>
+        <span class="tag ios">iPhone and iPad only</span>
+        <h3>Sharing with a supervisor</h3>
+        <p>There are no invitations on Android. Hand a supervisor the PDF report, or a backup to restore in their own app.</p>
+      </article>
+      <article>
+        <span class="tag ios">iPhone only</span>
+        <h3>Siri, Control Center, Live Activity</h3>
+        <p>Android gets the widget, the Quick Settings tile, app shortcuts and the notification timer instead.</p>
+      </article>
+      <article>
+        <span class="tag ok">Android only</span>
+        <h3>Start from your car's Bluetooth</h3>
+        <p>Pair the car once and a drive can start and finish with the connection.</p>
+      </article>
+      <article>
+        <span class="tag ok">Same on both</span>
+        <h3>Recording, night hours, goals, reports</h3>
+        <p>Saved every 30 seconds, recovered after a crash, flagged for review when something's unsure. The PDF and CSV are identical.</p>
+      </article>
+      <article>
+        <span class="tag ok">Same on both</span>
+        <h3>Backup and restore</h3>
+        <p>One file format. A backup from either platform restores on the other, routes and all.</p>
+      </article>
+    </div>
+    <p class="fine" data-reveal>The full feature-by-platform table is on the <a href="../#platforms">home page</a>.</p>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="faq on-ground" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <p class="eyebrow" data-reveal>Android questions</p>
+    <h2 id="faq-title" class="display-2" data-reveal>Before your first drive on Android.</h2>
+    <div class="faq-list" data-reveal data-stagger>
+      <details class="faq-item"><summary>Which Android phones does Driving Hour Tracker support?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Any phone or tablet running Android 14 or later. Tablets and unfolded foldables show the logbook and the open drive side by side. A Wear OS watch paired to the phone can run the companion app.</p></div></details>
+      <details class="faq-item"><summary>Does the Android app sync or share the logbook like the iPhone app?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>No. On Android the logbook stays on the phone: there is no iCloud sync, no sharing and no invitations. To keep a copy or move it, save a backup file; to show a supervisor your hours, give them the PDF report or a backup to restore in their own app.</p></div></details>
+      <details class="faq-item"><summary>Can I move my logbook from iPhone to Android?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. On the iPhone, open Settings, Export and backup, and save a backup. Open that file with Driving Hour Tracker on the Android phone and choose Restore. Everything comes across, routes included, and a backup made on Android restores on iPhone the same way. <a href="../support/#android-move">Step by step on the support page</a>.</p></div></details>
+      <details class="faq-item"><summary>What permissions does the Android app ask for?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Location, while a drive is recording, for the route and night hours; Physical activity, if you turn on driving suggestions, to notice when you drive and when you stop; Notifications, so the live timer can show while you record; and Nearby devices, only if you set up Start from car Bluetooth. None are needed to time a drive by hand. <a href="#permissions">What each one is for</a>.</p></div></details>
+      <details class="faq-item"><summary>Why doesn't the timer show in my notifications while recording?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>The Notifications permission was declined. Recording still works and the drive is still saved every 30 seconds, but Android hides the timer. Allow notifications for Driving Hour Tracker in Android's app settings and it appears on the next drive.</p></div></details>
+      <details class="faq-item"><summary>How does starting a drive from my car work?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>In Settings, open Start from car Bluetooth and choose your car once from the list Android shows. From then on, when your phone connects to the car the app either starts a drive with your usual supervisor or shows a notification asking first, whichever you chose, and finishes the drive when the car disconnects. A drive the car starts records time only until you open the app; choose Ask me first to get the route as well.</p></div></details>
+      <details class="faq-item"><summary>Does the Wear OS app work without the phone?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>No. The phone does the recording; the watch shows your hours and sends start, pause and finish to it. Keep the phone nearby and connected. If the watch can't reach the phone it says so, and the command isn't queued.</p></div></details>
+      <details class="faq-item"><summary>Does the Android app work offline?<svg class="i" width="20" height="20"><use href="#i-plus"/></svg></summary><div class="answer"><p>Yes. Recording, the timer, night estimates, the logbook, reports and backups all work offline. Only the Google Maps picture behind a route needs a connection to load; the route itself is saved either way.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="cta" id="download" aria-labelledby="cta-title">
+  <div class="cta-motif" aria-hidden="true"><svg viewBox="0 0 1024 1024"><use href="#i-ticks"/></svg></div>
+  <div class="wrap cta-row">
+    <div>
+      <h2 id="cta-title" class="display-2" data-reveal>Your first drive is one tap away.</h2>
+      <p class="section-lede" data-reveal>Driving Hour Tracker is on Google Play for Android phones, tablets and Wear OS, and on the App Store for iPhone, iPad and Apple Watch.</p>
+      <div class="stores" data-reveal>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.karmaacademy.drivinghourstracker_driverly"><img src="../assets/badges/google-play.svg" width="169" height="50" alt="Get it on Google Play"></a>
+        <a class="store" href="https://apps.apple.com/app/id6819568713"><img src="../assets/badges/app-store.svg" width="150" height="50" alt="Download on the App Store"></a>
+        <a class="btn btn-ghost-ink" href="../support/#android">Android support</a>
+      </div>
+    </div>
+    <div class="cta-car" aria-hidden="true" data-reveal><svg viewBox="12 36 68 54"><use href="#i-car"/></svg></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-row">
+    <a class="brand" href="../"><img src="../assets/icons/app-icon.svg" width="28" height="28" alt="">Driving Hour Tracker</a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="../">iPhone</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../support/">Support</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <p class="foot-note">© 2026 KarmaAcademy. Apple, iPhone, iPad, Apple Watch, Siri and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Google Play, the Google Play logo, Google Maps, Android and Wear OS are trademarks of Google LLC.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
