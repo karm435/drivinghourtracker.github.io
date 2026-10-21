@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Support · Driving Hour Tracker</title>
-<meta name="description" content="Help with the Driving Hour Tracker app: recording drives, driving detection, night hours, drives that need review, sharing with a supervisor, Apple Watch, Siri, exports and backups. Contact support.">
+<meta name="description" content="Help with the Driving Hour Tracker learner logbook app on iPhone and Android: recording drives, driving detection, night hours, drives that need review, sharing, Apple Watch, Siri, Android permissions, the notification timer, starting from your car, Wear OS, exports and backups. Contact support.">
 <link rel="canonical" href="https://drivinghourtracker.karmafy.com.au/support/">
 <meta name="theme-color" content="#FFC72C">
 <meta name="color-scheme" content="light">
 <meta name="apple-itunes-app" content="app-id=6819568713">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Support · Driving Hour Tracker">
-<meta property="og:description" content="Help with recording drives, night hours, sharing, Apple Watch, Siri, exports and backups.">
+<meta property="og:description" content="Help with recording drives, night hours, sharing, Apple Watch, Siri, Android permissions, Wear OS, exports and backups.">
 <meta property="og:url" content="https://drivinghourtracker.karmafy.com.au/support/">
 <meta property="og:image" content="https://drivinghourtracker.karmafy.com.au/assets/img/og-image.jpg">
 <link rel="icon" href="../assets/icons/favicon-32.png" sizes="32x32" type="image/png">
@@ -29,42 +29,58 @@
     </a>
     <nav class="nav-links" aria-label="Sections">
       <a href="../#features">Features</a>
+      <a href="../android/">Android</a>
       <a href="../#faq">FAQ</a>
       <a href="../privacy/">Privacy</a>
       <a href="./" aria-current="page">Support</a>
     </nav>
-    <a class="nav-cta" href="https://apps.apple.com/app/id6819568713"><span class="long">Download on the App Store</span><span class="short" aria-hidden="true">App Store</span></a>
+    <a class="nav-cta" href="../#download"><span class="long">Get the app</span><span class="short" aria-hidden="true">Get it</span></a>
   </div>
 </header>
 
 <main id="main" class="doc">
   <div class="wrap narrow">
     <h1>Support</h1>
-    <p class="updated">How the app works, answers to common questions, and how to reach us.</p>
+    <p class="updated">How the app works on iPhone and Android, answers to common questions, and how to reach us.</p>
 
-    <h2>Getting started</h2>
-    <p>Open the app, type the learner's name and the name of a first supervisor, and tap Create logbook. There's no sign-up. Goals are optional: set the total hours you're aiming for and how many of them should be at night. Night hours count toward the total, so the night goal can't be higher than the total. You can change names and goals later in Settings.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#start">Getting started</a>
+      <a href="#recording">Recording</a>
+      <a href="#detection">Driving detection</a>
+      <a href="#night">Night hours</a>
+      <a href="#review">Needs review</a>
+      <a href="#routes">Routes and maps</a>
+      <a href="#sharing">Supervisors and sharing</a>
+      <a href="#export">Export and backup</a>
+      <a href="#iphone">iPhone and Apple Watch</a>
+      <a href="#android">Android</a>
+      <a href="#wear">Wear OS</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <h2>Recording a drive</h2>
+    <h2 id="start">Getting started</h2>
+    <p>Open the app, type the learner's name and the name of a first supervisor, and tap Create logbook. There's no sign-up on iPhone or Android. Goals are optional: set the total hours you're aiming for and how many of them should be at night. Night hours count toward the total, so the night goal can't be higher than the total. You can change names and goals later in Settings.</p>
+
+    <h2 id="recording">Recording a drive</h2>
     <ol class="steps-list">
       <li>Tap <strong>Start drive</strong>, pick who's supervising, and start. The timer, the route and the supervisor are saved together.</li>
-      <li>While recording, the drive is written to your device every 30 seconds. Pause whenever you like; paused time doesn't count.</li>
+      <li>While recording, the drive is written to your phone every 30 seconds. Pause whenever you like; paused time doesn't count.</li>
       <li>Tap <strong>Finish</strong> when you're parked. The drive is saved straight away, and you can check or edit it afterwards.</li>
     </ol>
-    <p>You can also start, pause and finish from the Lock Screen Live Activity, the Practice drive toggle in Control Center, Siri, or Apple Watch. Use the controls while parked.</p>
+    <p>On iPhone you can also start, pause and finish from the Lock Screen Live Activity, the Practice drive toggle in Control Center, Siri, or Apple Watch. On Android, use the recording notification, the Practice drive tile in Quick Settings, the home-screen widget, a press-and-hold shortcut on the app icon, or your Wear OS watch. Use the controls while parked.</p>
 
-    <h2>Driving detection</h2>
+    <h2 id="detection">Driving detection</h2>
     <p>In Settings, under Driving assistance, you can turn on two helpers:</p>
     <ul>
       <li><strong>Suggest starting a drive</strong> shows a notification when it looks like you're driving. Tap Review and start to pick a supervisor and record, or Not now.</li>
       <li><strong>Finish when driving stops</strong> offers to finish once you park, and saves the drive five minutes later unless you choose Keep recording.</li>
     </ul>
-    <p>These need Motion and Fitness access, Always location access and notifications. Detection is best effort: a missed sensor update never finishes a drive on its own, and you can always record manually.</p>
+    <p>On iPhone these need Motion and Fitness access, Always location access and notifications. On Android they need Physical activity and notifications; no background location. Detection is best effort: a missed sensor update never finishes a drive on its own, and you can always record manually.</p>
 
-    <h2>Night hours</h2>
+    <h2 id="night">Night hours</h2>
     <p>The app works out night time from sunset and sunrise along the recorded route, so it needs location access while you drive. Night is shown inside the drive's total, never on top of it. You can edit the day and night minutes of any drive. If a drive has no route, night isn't estimated and the drive is flagged so you can add the night minutes yourself.</p>
 
-    <h2>Drives that need review</h2>
+    <h2 id="review">Drives that need review</h2>
     <p>A drive is flagged for review when the app couldn't be sure about its time. The card on the drive says why:</p>
     <ul>
       <li>It was recovered after the app closed during recording. Check the time and night hours.</li>
@@ -80,21 +96,31 @@
     <p>Nothing is lost. The next time you open the app, the drive is recovered at its last saved time, paused, and flagged for review. Resume it if you're still driving, or finish it and check the times.</p>
     <p>If a drive ever can't be saved, the app shows a recovery screen. The recording is kept safely on the device. Tap Try saving again, or share a recovery file so you have a copy before doing anything else. Drives you've already saved stay in your logbook.</p>
 
-    <h2>Routes and maps</h2>
-    <p>Every recorded drive shows its route and distance. Tap Open map to see where you went. Remove route deletes the location points for that drive and never changes its hours. Routes stay in your logbook and are left out of reports.</p>
+    <h2 id="routes">Routes and maps</h2>
+    <p>Every recorded drive shows its route and distance. Tap Open map to see where you went: Apple Maps on iPhone, Google Maps on Android. The map needs an internet connection to draw; the route is kept either way. Remove route deletes the location points for that drive and never changes its hours. Routes stay in your logbook and are left out of reports.</p>
 
-    <h2>Supervisors and sharing</h2>
+    <h2 id="sharing">Supervisors and sharing</h2>
     <p>These are two different things.</p>
     <ul>
       <li><strong>A supervisor</strong> is a name you pick from when you start a drive. Add or remove supervisors in Settings. Deleting one keeps their name on the drives they supervised.</li>
-      <li><strong>Sharing</strong> gives someone a live copy of the whole logbook over iCloud, to follow along or to add and edit drives. Open Sharing from Settings, under Supervisors, or right after adding a supervisor. Type the Apple Account email they sign in to iCloud with, choose Can add drives or View only, tap Add person, then send them the invitation link; it opens only for the people you added. They need iCloud and the app. Only the owner can add people or change access, and the owner can remove anyone.</li>
+      <li><strong>Sharing</strong> <span class="plat">iPhone and iPad</span> gives someone a live copy of the whole logbook over iCloud, to follow along or to add and edit drives. Open Sharing from Settings, under Supervisors, or right after adding a supervisor. Type the Apple Account email they sign in to iCloud with, choose Can add drives or View only, tap Add person, then send them the invitation link; it opens only for the people you added. They need iCloud and the app on an iPhone or iPad. Only the owner can add people or change access, and the owner can remove anyone.</li>
     </ul>
     <p>If someone shared a logbook with you, it appears in the logbook switcher under Shared with me, as "Shared by" their name. Its Sharing screen shows who has access and lets you leave at any time; the owner keeps the logbook.</p>
+    <div class="platform-note"><p><strong>On Android</strong> sharing isn't available, and an invitation link can't be opened in the Android app. To show a supervisor your hours, send them the PDF report, or give them a backup file to restore in their own copy of the app.</p></div>
 
-    <h2>Apple Watch</h2>
+    <h2 id="export">Export and backup</h2>
+    <p>In Settings, under Your data, choose Export and backup:</p>
+    <ul>
+      <li><strong>PDF report:</strong> every drive with its date, times, night hours and supervisor. For your records; it doesn't replace any official logbook, app or form, so check what your licensing authority accepts.</li>
+      <li><strong>Spreadsheet (CSV):</strong> the same drives, to open in Numbers, Excel or Sheets.</li>
+      <li><strong>Save a backup:</strong> everything, including routes. Restore it on any iPhone, iPad or Android phone: a backup made on one platform restores on the other. A restore creates a separate logbook, or adds what's missing to a copy you already have; sharing isn't restored.</li>
+      <li><strong>Import a spreadsheet:</strong> adds new drives to the open logbook and skips any that are already there. A drive whose supervisor isn't in the logbook is flagged so you can check who supervised.</li>
+    </ul>
+
+    <h2 id="iphone">On iPhone, iPad and Apple Watch</h2>
+    <h3>Apple Watch</h3>
     <p>The watch app shows your hours and recent drives, lets you pick a supervisor, and starts, pauses and finishes drives. Your iPhone does the recording, so it needs to be nearby and reachable; a command sent while the iPhone is out of reach isn't queued. Complications show your progress and a Start button.</p>
-
-    <h2>Siri and Shortcuts</h2>
+    <h3>Siri and Shortcuts</h3>
     <p>Say any of these, or add them to Shortcuts:</p>
     <ul>
       <li>"Start practice with Driving Hour Tracker"</li>
@@ -106,22 +132,60 @@
       <li>"Open my logbook in Driving Hour Tracker"</li>
       <li>"Open my current drive in Driving Hour Tracker"</li>
     </ul>
+    <h3>iCloud</h3>
+    <p>When you're signed in to iCloud, the logbook syncs between your iPhone and iPad on its own. Turn it off for the app in the Settings app under your Apple Account, then iCloud; the logbook then stays on the device.</p>
 
-    <h2>Export and backup</h2>
-    <p>In Settings, under Your data, choose Export and backup:</p>
+    <h2 id="android">On Android</h2>
+    <p>Driving Hour Tracker for Android runs on phones and tablets with Android 14 or later. Tablets and unfolded foldables show the logbook and the open drive side by side. Everything above applies; these sections cover what's Android-specific.</p>
+
+    <h3 id="android-permissions">Permissions, and what each one is for</h3>
     <ul>
-      <li><strong>PDF report:</strong> every drive with its date, times, night hours and supervisor. For your records; it doesn't replace any official logbook, app or form, so check what your licensing authority accepts.</li>
-      <li><strong>Spreadsheet (CSV):</strong> the same drives, to open in Numbers or Excel.</li>
-      <li><strong>Save a backup:</strong> everything, including routes. Restore it on any iPhone or iPad. A restore creates a separate logbook, or adds what's missing to a copy you already have; sharing isn't restored.</li>
-      <li><strong>Import a spreadsheet:</strong> adds new drives to the open logbook and skips any that are already there. A drive whose supervisor isn't in the logbook is flagged so you can check who supervised.</li>
+      <li><strong>Location:</strong> asked for when you start a drive with Record your route on. Used only while that drive is recording, to draw the route and work out night hours. The app never asks for "Allow all the time". Choose Time only on the start screen to record without it.</li>
+      <li><strong>Physical activity:</strong> asked for when you turn on Suggest starting a drive or Finish when driving stops. Lets the app notice when you're in a vehicle and when the driving stops.</li>
+      <li><strong>Notifications:</strong> asked for the first time you start a drive. Shows the live timer while you record, and lets driving suggestions and a car start ask you before anything happens.</li>
+      <li><strong>Nearby devices:</strong> asked for only when you set up Start from car Bluetooth, so Android can tell the app when your car connects.</li>
+    </ul>
+    <p>Change any of them later in Android's Settings, under Apps, then Driving Hour Tracker, then Permissions.</p>
+
+    <h3 id="android-timer">The timer isn't showing in my notifications</h3>
+    <p>Notifications are off for the app. Recording still works and the drive is still saved every 30 seconds; Android just hides the ongoing notification, so the shade shows no timer and no Pause or Finish buttons. Open Android's Settings, Apps, Driving Hour Tracker, Notifications, and allow them. The timer appears on your next drive. The widget and the Quick Settings tile show the recording state either way.</p>
+
+    <h3 id="android-shortcuts">Widget, Quick Settings tile and app shortcuts</h3>
+    <ul>
+      <li><strong>Home-screen widget:</strong> press and hold an empty spot on the home screen, choose Widgets, and add Practice progress. It shows your hours against your goals, your last drive and a Start drive button, and the live timer while you record.</li>
+      <li><strong>Quick Settings tile:</strong> in the app's Settings, under Shortcuts, tap Quick Settings tile to add Practice drive to the shade, or swipe down, tap the edit pencil and drag it in. One tap starts a drive with your usual supervisor; while recording, one tap finishes it. The tile is greyed until a logbook exists.</li>
+      <li><strong>App shortcuts:</strong> press and hold the app icon on the home screen for Start practice, Log a drive, Practice progress, and Start with each of your supervisors.</li>
     </ul>
 
-    <h2>Privacy</h2>
-    <p>There are no accounts, analytics or ads. Your logbook stays on your devices and in your own iCloud account. Read the <a href="../privacy/">privacy policy</a>.</p>
+    <h3 id="android-car">Start from your car</h3>
+    <p>In the app's Settings, under Driving assistance, open Start from car Bluetooth:</p>
+    <ol class="steps-list">
+      <li>Tap <strong>Choose your car</strong>. Android shows the Bluetooth devices it knows; pick your car and confirm. This is a one-time companion device pairing, and the app learns only that one device.</li>
+      <li>Choose what a connection does: <strong>Start a drive</strong> records straight away with your usual supervisor, or <strong>Ask me first</strong> shows a notification with a Start drive button.</li>
+      <li>Leave <strong>Finish when the car disconnects</strong> on to save a drive your car started when your phone disconnects from it.</li>
+    </ol>
+    <p>A drive that starts from the car records time only until you open the app, because Android doesn't let the app use location from that kind of start. Choose Ask me first and tap the notification to get the route from the start. If you have more than one supervisor, the app notifies you to choose one. Forget this car removes the pairing.</p>
 
-    <div class="contact">
+    <h3 id="android-move">Moving a logbook from iPhone to Android, or back</h3>
+    <ol class="steps-list">
+      <li>On the old phone, open Settings, then Export and backup, and tap <strong>Save a backup</strong>. Put the file somewhere the new phone can reach: a cloud drive, an email to yourself, or a cable.</li>
+      <li>On the new phone, open Settings, Export and backup, tap <strong>Restore a backup</strong> and choose the file.</li>
+      <li>The restore creates the logbook, or adds what's missing to a copy that's already there. Routes, supervisors, goals and extra drive fields all come across.</li>
+    </ol>
+    <p>The backup format is the same on both platforms, so a backup made on Android restores on iPhone too. iCloud sync and sharing aren't part of a backup; on iPhone they resume once the logbook is there.</p>
+
+    <h3>Working offline</h3>
+    <p>Recording, the timer, night estimates, the logbook, reports and backups all work without a connection. The Google Maps picture behind a route loads when the phone is online; the route itself is saved regardless.</p>
+
+    <h2 id="wear">Wear OS</h2>
+    <p>The Wear OS app shows your hours and recent drives, lets you pick a supervisor, and starts, pauses and finishes drives. Your phone does the recording, so it needs to be nearby and connected to the watch; if the watch can't reach the phone it says so, and the command isn't queued. Install Driving Hour Tracker on the phone first, then on the watch from the Play Store on the watch. Add the Practice tile and the progress, night and Start complications from your watch face settings.</p>
+
+    <h2>Privacy</h2>
+    <p>There are no accounts, analytics or ads on either platform. Your logbook stays on your devices, and on iPhone in your own iCloud account. Read the <a href="../privacy/">privacy policy</a>.</p>
+
+    <div class="contact" id="contact">
       <h2 style="margin-top:0">Contact us</h2>
-      <p>Still stuck, or have an idea? Email us. It helps to include your device model, its iOS or watchOS version, and what you were doing when the problem happened.</p>
+      <p>Still stuck, or have an idea? Email us. It helps to include your device model, its iOS, watchOS, Android or Wear OS version, and what you were doing when the problem happened.</p>
       <button class="btn btn-ghost email-reveal" type="button" data-mail-user="troppus" data-mail-host="ua.moc.yfamrak">Show email address</button>
       <noscript><p>Turn on JavaScript to see our email address.</p></noscript>
     </div>
@@ -132,11 +196,12 @@
   <div class="wrap foot-row">
     <a class="brand" href="../"><img src="../assets/icons/app-icon.svg" width="28" height="28" alt="">Driving Hour Tracker</a>
     <nav class="foot-links" aria-label="Footer">
+      <a href="../android/">Android</a>
       <a href="../privacy/">Privacy</a>
       <a href="./">Support</a>
       <a href="../#faq">FAQ</a>
     </nav>
-    <p class="foot-note">© 2026 KarmaAcademy. Apple, iPhone, iPad, Apple Watch, Siri and iCloud are trademarks of Apple Inc.</p>
+    <p class="foot-note">© 2026 KarmaAcademy. Apple, iPhone, iPad, Apple Watch, Siri and iCloud are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Google Play, the Google Play logo, Android and Wear OS are trademarks of Google LLC.</p>
   </div>
 </footer>
 
