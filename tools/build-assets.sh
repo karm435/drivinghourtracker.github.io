@@ -46,6 +46,21 @@ keep "$raw/v2/watch-start.png"          watch-start
 keep "$raw/v2/watch-dashboard.png"      watch-dashboard
 keep "$raw/v2/watch-autostop.png"       watch-autostop
 
+# Android captures (1080 x 2400, shown at 412 x 916 pt in a plain phone outline) from the Android repo.
+# 08 is the Start a drive sheet and 09 duplicates the Settings capture, so they are named for what they show.
+android="$site/../DrivingHoursTrackerDriverly/store/raw/phone"
+droid() { cwebp -quiet -q 82 -resize 824 0 "$1" -o "$img/$2.webp"; }
+droid "$android/01-logbook.png"               android-logbook
+droid "$android/02-progress.png"              android-progress
+droid "$android/03-drive-details.png"         android-drive-map
+droid "$android/05-settings.png"              android-settings
+droid "$android/06-recording.png"             android-recording
+droid "$android/07-logbook-recording-bar.png" android-drive-recording-bar
+droid "$android/08-drive-saved.png"           android-start-sheet
+droid "$android/10-logbook-dark.png"          android-drive-map-dark
+
+# The store badges in assets/badges are the official SVGs from Apple and Google and are not generated here.
+
 # The exported PDF report's first page
 cwebp -quiet -q 80 -resize 800 0 "$design/Store Assets/Source/assets/report-page-1.png" -o "$img/report-page-1.webp"
 
